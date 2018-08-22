@@ -1,4 +1,4 @@
-# _Company Cruise "Dream"_
+# _Company Cruise "Wild Dolphin"_
 
 ## _Моє завдання :_
 8. _Система Круїзна Компанія.
