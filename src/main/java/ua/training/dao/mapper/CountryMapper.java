@@ -30,4 +30,11 @@ public class CountryMapper implements ObjectMapper<Country> {
         preparedStatement.setString(1,country.getName());
         preparedStatement.setString(2,country.getCity());
     }
+
+    @Override
+    public void setPreparedStatementWithID(PreparedStatement preparedStatement, Country country) throws SQLException {
+        preparedStatement.setString(1,country.getName());
+        preparedStatement.setString(2,country.getCity());
+        preparedStatement.setInt(3,country.getId());
+    }
 }

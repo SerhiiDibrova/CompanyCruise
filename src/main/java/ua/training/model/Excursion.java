@@ -8,9 +8,9 @@ public class Excursion implements Serializable {
     private int country;
     private String name;
     private String description;
-    private double price;
+    private long price;
     public Excursion(){}
-    public Excursion(int country, String name, String description, double price) {
+    public Excursion(int country, String name, String description, long price) {
         this.country = country;
         this.name = name;
         this.description = description;
@@ -49,11 +49,11 @@ public class Excursion implements Serializable {
         this.description = description;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 

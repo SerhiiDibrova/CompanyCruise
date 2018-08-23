@@ -51,7 +51,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User findById(int id) {
         logger.info("Find by id");
-        User user = null;
+        User user;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_ID);
             preparedStatement.setInt(1, id);
@@ -94,8 +94,8 @@ public class UserDaoImpl implements UserDao {
     public void update(User user) {
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USER);
-            userMapper.setPreparedStatement(preparedStatement, user);
-            preparedStatement.setInt(8, user.getId());
+            userMapper.setPreparedStatementWithID(preparedStatement, user);
+
             boolean result = preparedStatement.executeUpdate() > 0;
             if (result) {
                 connection.commit();

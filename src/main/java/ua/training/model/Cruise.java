@@ -2,7 +2,9 @@ package ua.training.model;
 
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class Cruise implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -15,10 +17,12 @@ public class Cruise implements Serializable {
     private LocalDateTime arrival;
     private CruiseCategory category;
     private int countPort;
-    private double price;
+    private long price;
 
-    public Cruise(){}
-    public Cruise(String name, int ship_id, int cityFrom, int cityTo, LocalDateTime departure, LocalDateTime arrival, CruiseCategory category, int countPort, double price) {
+    public Cruise() {
+    }
+
+    public Cruise(String name, int ship_id, int cityFrom, int cityTo, LocalDateTime departure, LocalDateTime arrival, CruiseCategory category, int countPort, long price) {
         this.name = name;
         this.ship_id = ship_id;
         this.cityFrom = cityFrom;
@@ -102,12 +106,24 @@ public class Cruise implements Serializable {
         this.countPort = countPort;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
+    }
+
+    public LocalDateTime convertToLocalDateTimeViaInstant(Date dateToConvert) {
+        return dateToConvert.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDateTime();
+    }
+
+    public Date convertToDateViaInstant(LocalDateTime dateToConvert) {
+        return (Date) java.util.Date.
+                from(dateToConvert.atZone(ZoneId.systemDefault())
+                        .toInstant());
     }
 
     @Override

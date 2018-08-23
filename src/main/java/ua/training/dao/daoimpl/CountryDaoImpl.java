@@ -50,7 +50,7 @@ public class CountryDaoImpl implements CountryDao {
     @Override
     public Country findById(int id) {
         logger.info("Find by id");
-        Country country = null;
+        Country country;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_COUNTRY_BY_ID);
             preparedStatement.setInt(1, id);
@@ -88,8 +88,7 @@ public class CountryDaoImpl implements CountryDao {
     public void update(Country country) {
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_COUNTRY);
-            countryMapper.setPreparedStatement(preparedStatement, country);
-            preparedStatement.setInt(3, country.getId());
+            countryMapper.setPreparedStatementWithID(preparedStatement,country);
             boolean result = preparedStatement.executeUpdate() > 0;
             if (result) {
                 connection.commit();

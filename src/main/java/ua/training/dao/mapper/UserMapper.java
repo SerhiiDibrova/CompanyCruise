@@ -38,4 +38,16 @@ public class UserMapper implements ObjectMapper<User> {
         preparedStatement.setString(6, user.getRole().name());
         preparedStatement.setDate(7, user.getCreated());
     }
+
+    @Override
+    public void setPreparedStatementWithID(PreparedStatement preparedStatement, User user) throws SQLException {
+        preparedStatement.setString(1, user.getLogin());
+        preparedStatement.setString(2, user.getPassword());
+        preparedStatement.setString(3, user.getFirstName());
+        preparedStatement.setString(4, user.getLastName());
+        preparedStatement.setString(5, user.getEmail());
+        preparedStatement.setString(6, user.getRole().name());
+        preparedStatement.setDate(7, user.getCreated());
+        preparedStatement.setInt(8,user.getId());
+    }
 }

@@ -13,4 +13,5 @@ public interface ObjectMapper<T> {
     T makeUnique(Map<Integer, T> cache,
                  T object);
     void setPreparedStatement(PreparedStatement preparedStatement, T object) throws SQLException;
+    void setPreparedStatementWithID(PreparedStatement preparedStatement, T object) throws SQLException;
 }
