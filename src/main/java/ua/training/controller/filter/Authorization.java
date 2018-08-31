@@ -25,11 +25,20 @@ public class Authorization {
                 Collections.singletonList(User.Role.ADMIN)
         );
         authorization = new HashMap<>();
-        authorization.put(Pattern.compile("/login"), unauthorized);
-        authorization.put(Pattern.compile("/registration"), unauthorized);
-        authorization.put(Pattern.compile("/signin"), unauthorized);
-        authorization.put(Pattern.compile("/signup"), unauthorized);
+        authorization.put(Pattern.compile("/cruise/login"), unauthorized);
+        authorization.put(Pattern.compile("/cruise/registration"), unauthorized);
+        authorization.put(Pattern.compile("/cruise/signin"), unauthorized);
+        authorization.put(Pattern.compile("/cruise/signup"), unauthorized);
+        authorization.put(Pattern.compile("/cruise/index"), all);
         authorization.put(Pattern.compile("/cruise"), all);
+        authorization.put(Pattern.compile("/cruise/countrylist"), authorized);
+        authorization.put(Pattern.compile("/cruise/shiplist"), authorized);
+        authorization.put(Pattern.compile("/cruise/excursionlist"), authorized);
+        authorization.put(Pattern.compile("/cruise/country"), authorized);
+        authorization.put(Pattern.compile("/cruise/logout"), authorized);
+        authorization.put(Pattern.compile("/cruise/profile"), authorized);
+        authorization.put(Pattern.compile("/cruise/cruiselist"), authorized);
+        authorization.put(Pattern.compile("/card/\\d{1,5}"), authorized);
         authorization.put(Pattern.compile("/"), all);
     }
 

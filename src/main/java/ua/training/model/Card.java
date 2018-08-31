@@ -1,21 +1,17 @@
 package ua.training.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Card implements Serializable {
     private final static long serialVersionUID = 1L;
     private int card_id;
-    private int user_id;
-    private int cruise_id;
-    private int excursion_id;
+    private User user;
+    private List<Cruise> cruise = new ArrayList<>();
+    private List<Excursion> excursion = new ArrayList<>();
     private long price_total;
     public Card(){}
-    public Card(int user_id, int cruise_id, int excursion_id, int price_total) {
-        this.user_id = user_id;
-        this.cruise_id = cruise_id;
-        this.excursion_id = excursion_id;
-        this.price_total = price_total;
-    }
 
     public int getCard_id() {
         return card_id;
@@ -25,28 +21,28 @@ public class Card implements Serializable {
         this.card_id = card_id;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public int getCruise_id() {
-        return cruise_id;
+    public List<Cruise> getCruise() {
+        return cruise;
     }
 
-    public void setCruise_id(int cruise_id) {
-        this.cruise_id = cruise_id;
+    public void setCruise(List<Cruise> cruise) {
+        this.cruise = cruise;
     }
 
-    public int getExcursion_id() {
-        return excursion_id;
+    public List<Excursion> getExcursion() {
+        return excursion;
     }
 
-    public void setExcursion_id(int excursion_id) {
-        this.excursion_id = excursion_id;
+    public void setExcursion(List<Excursion> excursion) {
+        this.excursion = excursion;
     }
 
     public long getPrice_total() {
@@ -60,9 +56,9 @@ public class Card implements Serializable {
     @Override
     public String toString() {
         return "Card{" +
-                "user_id=" + user_id +
-                ", cruise_id=" + cruise_id +
-                ", excursion_id=" + excursion_id +
+                "user_id=" + user.getLogin() +
+                ", cruise_id=" + cruise.toString() +
+                ", excursion_id=" + excursion.toString() +
                 ", price_total=" + price_total +
                 '}';
     }

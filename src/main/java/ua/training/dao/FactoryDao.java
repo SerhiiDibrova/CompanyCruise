@@ -33,5 +33,15 @@ public class FactoryDao implements AbstractFactory {
         return new ShipDaoImpl();
     }
 
+    @Override
+    public ShipImageDaoImpl createShipImageDao() {
+        return new ShipImageDaoImpl();
+    }
+
+    @Override
+    public ExcursionImageDaoImpl createExcursionImageDao() {
+        return new ExcursionImageDaoImpl();
+    }
+
 
 }

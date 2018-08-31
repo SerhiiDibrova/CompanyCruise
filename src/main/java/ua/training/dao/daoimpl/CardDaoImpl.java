@@ -50,12 +50,15 @@ public class CardDaoImpl implements CardDao {
     @Override
     public Card findById(int id) {
         logger.info("Find by id");
-        Card card;
+        Card card=null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_CARD_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            card = cardMapper.extractFromResultSet(resultSet);
+            if(resultSet.next()) {
+                card = cardMapper.extractFromResultSet(resultSet);
+                logger.info("Founded : " + card.toString());
+            }
         } catch (SQLException e) {
             logger.error(e.toString());
             return null;

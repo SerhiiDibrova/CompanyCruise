@@ -3,8 +3,10 @@ package ua.training.dao.daoimpl;
 import org.apache.log4j.Logger;
 import ua.training.dao.ExcursionDao;
 import ua.training.dao.connection.DataSourceConnection;
+import ua.training.dao.mapper.ExcursionImageMapper;
 import ua.training.dao.mapper.ExcursionMapper;
 import ua.training.model.Excursion;
+import ua.training.model.ExcursionImage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,9 +23,11 @@ public class ExcursionDaoImpl implements ExcursionDao {
 
     private final static Logger logger = Logger.getLogger(ExcursionDaoImpl.class);
     private ExcursionMapper excursionMapper;
+    private ExcursionImageMapper excursionImageMapper;
 
-    public ExcursionDaoImpl(){
-        this.excursionMapper=new ExcursionMapper();
+    public ExcursionDaoImpl() {
+        this.excursionMapper = new ExcursionMapper();
+        this.excursionImageMapper = new ExcursionImageMapper();
     }
 
 
@@ -51,12 +55,15 @@ public class ExcursionDaoImpl implements ExcursionDao {
     @Override
     public Excursion findById(int id) {
         logger.info("Find by id");
-        Excursion excursion;
+        Excursion excursion = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_EXCURSION_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            excursion = excursionMapper.extractFromResultSet(resultSet);
+            if (resultSet.next()) {
+                excursion = excursionMapper.extractFromResultSet(resultSet);
+                logger.info("Founded : " + excursion.toString());
+            }
         } catch (SQLException e) {
             logger.error(e.toString());
             return null;
@@ -68,12 +75,17 @@ public class ExcursionDaoImpl implements ExcursionDao {
     public List<Excursion> findAll() {
         logger.info("find all");
         Map<Integer, Excursion> excursions = new HashMap<>();
+        Map<Integer,ExcursionImage> excursionImages = new HashMap<>();
         try (Connection connection = DataSourceConnection.getConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_EXCURSION);
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_WITH_EXCURSION_IMAGE);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Excursion excursion = excursionMapper.extractFromResultSet(resultSet);
+                ExcursionImage excursionImage = excursionImageMapper.extractFromResultSet(resultSet);
                 excursion = excursionMapper.makeUnique(excursions, excursion);
+                excursionImage = excursionImageMapper.makeUnique(excursionImages,excursionImage);
+                excursion.getExcursionImageList().add(excursionImage);
+                excursionImage.setExcursion(excursion);
                 excursions.put(excursion.getId(), excursion);
                 logger.info("Added excursion to Map  :" + excursion.toString());
             }

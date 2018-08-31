@@ -2,17 +2,16 @@ package ua.training.model;
 
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 public class Cruise implements Serializable {
     private final static long serialVersionUID = 1L;
     private int id;
     private String name;
-    private int ship_id;
-    private int cityFrom;
-    private int cityTo;
+    private Ship ship;
+    private Country countryFrom;
+    private Country countryTo;
     private LocalDateTime departure;
     private LocalDateTime arrival;
     private CruiseCategory category;
@@ -20,18 +19,6 @@ public class Cruise implements Serializable {
     private long price;
 
     public Cruise() {
-    }
-
-    public Cruise(String name, int ship_id, int cityFrom, int cityTo, LocalDateTime departure, LocalDateTime arrival, CruiseCategory category, int countPort, long price) {
-        this.name = name;
-        this.ship_id = ship_id;
-        this.cityFrom = cityFrom;
-        this.cityTo = cityTo;
-        this.departure = departure;
-        this.arrival = arrival;
-        this.category = category;
-        this.countPort = countPort;
-        this.price = price;
     }
 
     public int getId() {
@@ -50,28 +37,28 @@ public class Cruise implements Serializable {
         this.name = name;
     }
 
-    public int getShip_id() {
-        return ship_id;
+    public Ship getShip() {
+        return ship;
     }
 
-    public void setShip_id(int ship_id) {
-        this.ship_id = ship_id;
+    public void setShip(Ship ship) {
+        this.ship = ship;
     }
 
-    public int getCityFrom() {
-        return cityFrom;
+    public Country getCountryFrom() {
+        return countryFrom;
     }
 
-    public void setCityFrom(int cityFrom) {
-        this.cityFrom = cityFrom;
+    public void setCountryFrom(Country countryFrom) {
+        this.countryFrom = countryFrom;
     }
 
-    public int getCityTo() {
-        return cityTo;
+    public Country getCountryTo() {
+        return countryTo;
     }
 
-    public void setCityTo(int cityTo) {
-        this.cityTo = cityTo;
+    public void setCountryTo(Country countryTo) {
+        this.countryTo = countryTo;
     }
 
     public LocalDateTime getDeparture() {
@@ -114,25 +101,25 @@ public class Cruise implements Serializable {
         this.price = price;
     }
 
-    public LocalDateTime convertToLocalDateTimeViaInstant(Date dateToConvert) {
-        return dateToConvert.toInstant()
-                .atZone(ZoneId.systemDefault())
-                .toLocalDateTime();
+    public LocalDateTime convertToLocalDateTime(Timestamp timestap) {
+        if(timestap!=null){
+            return timestap.toLocalDateTime();
+        }
+        return null;
     }
 
-    public Date convertToDateViaInstant(LocalDateTime dateToConvert) {
-        return (Date) java.util.Date.
-                from(dateToConvert.atZone(ZoneId.systemDefault())
-                        .toInstant());
+    public Timestamp convertToTimestap(LocalDateTime localDateTime) {
+        return Timestamp.valueOf(localDateTime);
     }
+
 
     @Override
     public String toString() {
         return "Cruise{" +
                 "name='" + name + '\'' +
-                ", ship_id=" + ship_id +
-                ", cityFrom=" + cityFrom +
-                ", cityTo=" + cityTo +
+                ", ship_id=" + ship.toString() +
+                ", cityFrom=" + countryFrom.toString() +
+                ", cityTo=" + countryTo.toString() +
                 ", departure=" + departure +
                 ", arrival=" + arrival +
                 ", category=" + category +

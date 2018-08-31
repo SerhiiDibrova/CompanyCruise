@@ -1,6 +1,8 @@
 package ua.training.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Excursion implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -9,6 +11,7 @@ public class Excursion implements Serializable {
     private String name;
     private String description;
     private long price;
+    private List<ExcursionImage> excursionImageList = new ArrayList<>();
     public Excursion(){}
     public Excursion(int country, String name, String description, long price) {
         this.country = country;
@@ -55,6 +58,14 @@ public class Excursion implements Serializable {
 
     public void setPrice(long price) {
         this.price = price;
+    }
+
+    public List<ExcursionImage> getExcursionImageList() {
+        return excursionImageList;
+    }
+
+    public void setExcursionImageList(List<ExcursionImage> excursionImageList) {
+        this.excursionImageList = excursionImageList;
     }
 
     @Override

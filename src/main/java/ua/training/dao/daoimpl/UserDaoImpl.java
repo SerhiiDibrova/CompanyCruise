@@ -51,12 +51,15 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User findById(int id) {
         logger.info("Find by id");
-        User user;
+        User user = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            user = userMapper.extractFromResultSet(resultSet);
+            if(resultSet.next()) {
+                user = userMapper.extractFromResultSet(resultSet);
+            logger.info("founded " + user.getLogin());
+            }
         } catch (SQLException e) {
             logger.error(e.toString());
             return null;
@@ -133,7 +136,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByEmail(String email) {
-        logger.info("Find by email" + email);
+        logger.info("Find by email : " + email);
         User user = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_EMAIL);

@@ -6,22 +6,30 @@ import ua.training.controller.command.CommandList.CommandList;
 import ua.training.controller.command.servletAction.ServletAction;
 import ua.training.controller.exception.CommandException;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashSet;
 
 public class Servlet extends HttpServlet {
     private final static Logger logger = Logger.getLogger(Servlet.class);
     private CommandList commandList = CommandList.getInstance();
 
+    public void init(ServletConfig servletConfig) throws ServletException {
+       servletConfig.getServletContext()
+                .setAttribute("loggedUsers", new HashSet<String>());
+       super.init(servletConfig);
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         logger.info(req.getLocalAddr());
-        logger.info(getServletName() + " get request");
+      logger.info(getServletName() + " get request");
         processRequest(req, resp);
     }
 
@@ -41,6 +49,7 @@ public class Servlet extends HttpServlet {
             Command action = commandList.getCommand(req);
             ServletAction dispatcher = action.execute(req, resp);
             dispatcher.action(req, resp);
+           // session.setAttribute("path", req.getRequestURL().toString());
         } catch (CommandException e) {
             e.printStackTrace();
             logger.error("command exception", e);

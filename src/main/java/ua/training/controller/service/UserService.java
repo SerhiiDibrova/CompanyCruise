@@ -9,12 +9,12 @@ import ua.training.dao.UserDao;
 import ua.training.model.User;
 
 import javax.servlet.http.HttpServletRequest;
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class UserService {
     private final static Logger logger = Logger.getLogger(UserService.class);
     private AbstractFactory factoryDao;
-    UserDao userDao;
+    private UserDao userDao;
 
     public UserService() {
         this.factoryDao = new FactoryDao();
@@ -36,7 +36,7 @@ public class UserService {
         user.setLastName(lastName);
         user.setEmail(email);
         user.setRole(User.Role.USER);
-        user.setCreated(new Date(new java.util.Date().getTime()));
+        user.setCreated(LocalDateTime.now());
         boolean result = userDao.create(user);
         if (result) {
             logger.info("Created user " + user.getLogin());

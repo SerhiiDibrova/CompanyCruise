@@ -23,10 +23,14 @@ public class CommandList {
         commands.put("signup" , new SignUpCommand());
         commands.put("index", new WelcomePageCommand());
         commands.put("cruise", new WelcomePageCommand());
+        commands.put("country" , new CountryCommand());
         commands.put("countrylist", new CountryShowListCommand());
-        commands.put("country", new CountryCommand());
         commands.put("countryadd", new CountryAddCommand());
-
+        commands.put("shiplist", new ShipListCommand());
+        commands.put("cruiselist", new CruiseListCommand());
+        commands.put("excursionlist",new ExcursionListCommand());
+        commands.put("logout" , new SignOutCommand());
+        commands.put("error", new NoCommand());
     }
 
     public Command getCommand(HttpServletRequest request) {

@@ -2,6 +2,9 @@ package ua.training.model;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class User implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -15,13 +18,13 @@ public class User implements Serializable {
     public enum Role {GUEST, USER, ADMIN}
 
     private Role role;
-    private Date created;
+    private LocalDateTime created;
 
     /*private List<Cruise> cruise;*/
 
     public User() {    }
     public User(int id){this.id=id;}
-    public User( String login, String password, String firstName, String lastName, String email, Role role,Date created) {
+    public User( String login, String password, String firstName, String lastName, String email, Role role,LocalDateTime created) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
@@ -87,21 +90,24 @@ public class User implements Serializable {
         this.role = role;
     }
 
-    public Date getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 
- /*  public List<Cruise> getCruise() {
-       return cruise;
-   }
+    public LocalDateTime convertToLocalDateTime(Timestamp timestap) {
+        if(timestap!=null){
+            return timestap.toLocalDateTime();
+        }
+        return null;
+    }
 
-   public void setCruise(List<Cruise> cruise) {
-        this.cruise = cruise;
-    }*/
+    public Timestamp convertToTimestap(LocalDateTime localDateTime) {
+        return Timestamp.valueOf(localDateTime);
+    }
 
 
     @Override

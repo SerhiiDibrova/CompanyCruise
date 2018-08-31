@@ -12,7 +12,7 @@ import java.util.List;
 public class CountryService {
     private final static Logger logger = Logger.getLogger(CountryService.class);
     private AbstractFactory factoryDao;
-    CountryDao countryDao;
+    private CountryDao countryDao;
     public CountryService(){
         this.factoryDao=new FactoryDao();
         countryDao=factoryDao.createCountryDao();

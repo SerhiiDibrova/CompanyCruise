@@ -14,11 +14,11 @@ public class CruiseMapper implements ObjectMapper<Cruise> {
         Cruise cruise = new Cruise();
         cruise.setId(rs.getInt("cruise_id"));
         cruise.setName(rs.getString("cruise_name"));
-        cruise.setShip_id(rs.getInt("ship_id"));
-        cruise.setCityFrom(rs.getInt("cruise_city_from"));
-        cruise.setCityTo(rs.getInt("cruise_city_to"));
-        cruise.setDeparture(cruise.convertToLocalDateTimeViaInstant(rs.getDate("cruise_departure")));
-        cruise.setArrival(cruise.convertToLocalDateTimeViaInstant(rs.getDate("cruise_arrival")));
+       // cruise.getShip().setShip_id(rs.getInt("ship_id"));
+        /*cruise.getCountryFrom().setId(rs.getInt("cruise_city_from"));
+        cruise.getCountryTo().setId(rs.getInt("cruise_city_to"));*/
+        cruise.setDeparture(cruise.convertToLocalDateTime(rs.getTimestamp("cruise_departure")));
+        cruise.setArrival(cruise.convertToLocalDateTime(rs.getTimestamp("cruise_arrival")));
         cruise.setCategory(CruiseCategory.valueOf(rs.getString("cruise_category")));
         cruise.setCountPort(rs.getInt("cruise_count_port"));
         cruise.setPrice(rs.getLong("cruise_price"));
@@ -34,11 +34,11 @@ public class CruiseMapper implements ObjectMapper<Cruise> {
     @Override
     public void setPreparedStatement(PreparedStatement preparedStatement, Cruise cruise) throws SQLException {
             preparedStatement.setString(1,cruise.getName());
-            preparedStatement.setInt(2,cruise.getShip_id());
-            preparedStatement.setInt(3,cruise.getCityFrom());
-            preparedStatement.setInt(4,cruise.getCityTo());
-            preparedStatement.setDate(5,cruise.convertToDateViaInstant(cruise.getDeparture()));
-            preparedStatement.setDate(6,cruise.convertToDateViaInstant(cruise.getArrival()));
+            preparedStatement.setInt(2,cruise.getShip().getShip_id());
+            preparedStatement.setInt(3,cruise.getCountryFrom().getId());
+            preparedStatement.setInt(4,cruise.getCountryTo().getId());
+            preparedStatement.setTimestamp(5,cruise.convertToTimestap(cruise.getDeparture()));
+            preparedStatement.setTimestamp(6,cruise.convertToTimestap(cruise.getArrival()));
             preparedStatement.setString(7,cruise.getCategory().name());
             preparedStatement.setInt(8,cruise.getCountPort());
             preparedStatement.setLong(9,cruise.getPrice());
@@ -48,11 +48,11 @@ public class CruiseMapper implements ObjectMapper<Cruise> {
     @Override
     public void setPreparedStatementWithID(PreparedStatement preparedStatement, Cruise cruise) throws SQLException {
         preparedStatement.setString(1,cruise.getName());
-        preparedStatement.setInt(2,cruise.getShip_id());
-        preparedStatement.setInt(3,cruise.getCityFrom());
-        preparedStatement.setInt(4,cruise.getCityTo());
-        preparedStatement.setDate(5,cruise.convertToDateViaInstant(cruise.getDeparture()));
-        preparedStatement.setDate(6,cruise.convertToDateViaInstant(cruise.getArrival()));
+        preparedStatement.setInt(2,cruise.getShip().getShip_id());
+        preparedStatement.setInt(3,cruise.getCountryFrom().getId());
+        preparedStatement.setInt(4,cruise.getCountryTo().getId());
+        preparedStatement.setTimestamp(5,cruise.convertToTimestap(cruise.getDeparture()));
+        preparedStatement.setTimestamp(6,cruise.convertToTimestap(cruise.getArrival()));
         preparedStatement.setString(7,cruise.getCategory().name());
         preparedStatement.setInt(8,cruise.getCountPort());
         preparedStatement.setLong(9,cruise.getPrice());

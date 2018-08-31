@@ -1,12 +1,17 @@
 package ua.training.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ship implements Serializable {
     private final static long serialVersionUID = 1L;
     private int ship_id;
     private String name;
     private int capacity;
+
+    private List<ShipImage> shipImageList = new ArrayList<>();
+
 
     public Ship() {
     }
@@ -40,11 +45,21 @@ public class Ship implements Serializable {
         this.capacity = capacity;
     }
 
+    public List<ShipImage> getShipImageList() {
+        return shipImageList;
+    }
+
+    public void setShipImageList(List<ShipImage> shipImage) {
+        this.shipImageList = shipImage;
+    }
+
+
     @Override
     public String toString() {
         return "Ship{" +
                 "name='" + name + '\'' +
                 ", capacity=" + capacity +
+                ":, "+
                 '}';
     }
 }

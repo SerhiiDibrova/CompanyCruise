@@ -3,8 +3,10 @@ package ua.training.dao.daoimpl;
 import org.apache.log4j.Logger;
 import ua.training.dao.ShipDao;
 import ua.training.dao.connection.DataSourceConnection;
+import ua.training.dao.mapper.ShipImageMapper;
 import ua.training.dao.mapper.ShipMapper;
 import ua.training.model.Ship;
+import ua.training.model.ShipImage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,9 +22,11 @@ import static ua.training.dao.query.ShipQuery.*;
 public class ShipDaoImpl implements ShipDao {
     private final static Logger logger = Logger.getLogger(ShipDaoImpl.class);
     private ShipMapper shipMapper;
+    private ShipImageMapper shipImageMapper;
 
-    public ShipDaoImpl(){
+    public ShipDaoImpl() {
         this.shipMapper = new ShipMapper();
+        this.shipImageMapper = new ShipImageMapper();
     }
 
     @Override
@@ -49,12 +53,15 @@ public class ShipDaoImpl implements ShipDao {
     @Override
     public Ship findById(int id) {
         logger.info("Find by id");
-        Ship ship;
+        Ship ship = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_SHIP_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            ship = shipMapper.extractFromResultSet(resultSet);
+            if (resultSet.next()) {
+                ship = shipMapper.extractFromResultSet(resultSet);
+                logger.info("Founded : " + ship.toString());
+            }
         } catch (SQLException e) {
             logger.error(e.toString());
             return null;
@@ -67,13 +74,18 @@ public class ShipDaoImpl implements ShipDao {
     public List<Ship> findAll() {
         logger.info("find all");
         Map<Integer, Ship> ships = new HashMap<>();
+        Map<Integer, ShipImage> shipImages = new HashMap<>();
         try (Connection connection = DataSourceConnection.getConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_SHIP);
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_WITH_SHIP_IMAGE);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Ship ship = shipMapper.extractFromResultSet(resultSet);
-                 ship = shipMapper.makeUnique(ships, ship);
-                ships.put(ship.getShip_id(), ship);
+                ShipImage shipImage = shipImageMapper.extractFromResultSet(resultSet);
+                ship = shipMapper.makeUnique(ships, ship);
+                shipImage = shipImageMapper.makeUnique(shipImages, shipImage);
+                ship.getShipImageList().add(shipImage);
+                shipImage.setShip(ship);
+                ships.put(ship.getShip_id(),ship);
                 logger.info("Added ship to Map  :" + ship.toString());
             }
 

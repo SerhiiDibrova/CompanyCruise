@@ -18,7 +18,7 @@ public class UserMapper implements ObjectMapper<User> {
         user.setLastName(rs.getString("user_last_name"));
         user.setEmail(rs.getString("user_email"));
         user.setRole(User.Role.valueOf(rs.getString("user_role")));
-        user.setCreated(rs.getDate("user_created"));
+        user.setCreated(user.convertToLocalDateTime(rs.getTimestamp("user_created")));
         return user;
     }
 
@@ -36,7 +36,7 @@ public class UserMapper implements ObjectMapper<User> {
         preparedStatement.setString(4, user.getLastName());
         preparedStatement.setString(5, user.getEmail());
         preparedStatement.setString(6, user.getRole().name());
-        preparedStatement.setDate(7, user.getCreated());
+        preparedStatement.setTimestamp(7, user.convertToTimestap(user.getCreated()));
     }
 
     @Override
@@ -47,7 +47,7 @@ public class UserMapper implements ObjectMapper<User> {
         preparedStatement.setString(4, user.getLastName());
         preparedStatement.setString(5, user.getEmail());
         preparedStatement.setString(6, user.getRole().name());
-        preparedStatement.setDate(7, user.getCreated());
+        preparedStatement.setTimestamp(7, user.convertToTimestap(user.getCreated()));
         preparedStatement.setInt(8,user.getId());
     }
 }

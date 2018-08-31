@@ -13,6 +13,9 @@ public class Endpoint {
     public static final String ADMIN_FORM = "ADMIN_FORM";
     public static final String COUNTRY_FORM = "COUNTRY_FORM";
     public static final String COUNTRY_LIST_FORM = "COUNTRY_LIST_FORM";
+    public static final String SHIP_LIST_FORM = "SHIP_LIST_FORM";
+    public static final String EXCURSION_LIST_FORM = "EXCURSION_LIST_FORM";
+    public static final String CRUISE_LIST_FORM = "CRUISE_LIST_FORM";
 
     public static Endpoint getInstance(){
         if (instance == null){
