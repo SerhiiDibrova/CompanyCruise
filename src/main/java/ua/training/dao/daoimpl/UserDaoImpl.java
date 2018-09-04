@@ -153,5 +153,24 @@ public class UserDaoImpl implements UserDao {
         return user;
     }
 
+    @Override
+    public User findByLogin(String login) {
+        logger.info("Find by login : " + login);
+        User user = null;
+        try (Connection connection = DataSourceConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_USER);
+            preparedStatement.setString(1, login);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()) {
+                user = userMapper.extractFromResultSet(resultSet);
+                logger.info("Founded :  " + user.toString());
+            }
+        } catch (SQLException e) {
+            logger.error(e.toString());
+            return null;
+        }
+        return user;
+    }
+
 
 }

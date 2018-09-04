@@ -38,6 +38,8 @@
     <a href="${pageContext.request.contextPath}/excursionlist">Excursion List</a>
     <br/>
     <a href="${pageContext.request.contextPath}/cruiselist">Cruise List</a>
+    <br/>
+    <a href="${pageContext.request.contextPath}/showcard">Card List</a>
 
 
 </div>

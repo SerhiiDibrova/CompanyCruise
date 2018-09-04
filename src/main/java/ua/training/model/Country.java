@@ -1,6 +1,7 @@
 package ua.training.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Country implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -38,6 +39,21 @@ public class Country implements Serializable {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Country country = (Country) o;
+        return id == country.id &&
+                Objects.equals(name, country.name) &&
+                Objects.equals(city, country.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * id;
     }
 
     @Override

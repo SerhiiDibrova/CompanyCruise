@@ -24,4 +24,9 @@ public class ExcursionService {
         return list;
     }
 
+    public Excursion getExcursionById(int id){
+        logger.info("Get Excursion : "+id);
+        return excursionDao.findById(id);
+    }
+
 }

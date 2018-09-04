@@ -22,7 +22,7 @@ public class CruiseService {
         this.cruiseDao=factoryDao.createCruiseDao();
     }
 
-    public boolean addNewCruise(HttpServletRequest request){
+/*    public boolean addNewCruise(HttpServletRequest request){
         logger.info("add new cruise");
         String name = request.getParameter("name");
         int ship = Integer.parseInt(request.getParameter("ship"));
@@ -51,7 +51,7 @@ public class CruiseService {
         }
         return result;
 
-    }
+    }*/
 
     public List showListContry(){
         logger.info("show list cruise");

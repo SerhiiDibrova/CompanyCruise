@@ -31,6 +31,9 @@ public class CommandList {
         commands.put("excursionlist",new ExcursionListCommand());
         commands.put("logout" , new SignOutCommand());
         commands.put("error", new NoCommand());
+        commands.put("cruise_card", new AddCartCommand());
+        commands.put("showcard" , new ShowCartCommand());
+        commands.put("pay", new PayCommand());
     }
 
     public Command getCommand(HttpServletRequest request) {

@@ -54,12 +54,16 @@ public class ShipDaoImpl implements ShipDao {
     public Ship findById(int id) {
         logger.info("Find by id");
         Ship ship = null;
+        ShipImage shipImage = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_SHIP_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 ship = shipMapper.extractFromResultSet(resultSet);
+                shipImage = shipImageMapper.extractFromResultSet(resultSet);
+                ship.getShipImageList().add(shipImage);
+                shipImage.setShip(ship);
                 logger.info("Founded : " + ship.toString());
             }
         } catch (SQLException e) {

@@ -27,8 +27,6 @@ public class CruiseListCommand implements Command {
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session =request.getSession();
         List<Cruise> cruises = cruiseService.showListContry();
-        List<Excursion> excursions = excursionService.showListContry();
-        session.setAttribute("excursions",excursions);
         session.setAttribute("cruises", cruises);
         return new Forward(Endpoint.getInstance().getProperty(Endpoint.CRUISE_LIST_FORM));
     }

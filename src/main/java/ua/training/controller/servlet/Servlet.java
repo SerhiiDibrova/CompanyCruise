@@ -20,9 +20,10 @@ public class Servlet extends HttpServlet {
     private CommandList commandList = CommandList.getInstance();
 
     public void init(ServletConfig servletConfig) throws ServletException {
+        super.init(servletConfig);
        servletConfig.getServletContext()
                 .setAttribute("loggedUsers", new HashSet<String>());
-       super.init(servletConfig);
+
     }
 
     @Override

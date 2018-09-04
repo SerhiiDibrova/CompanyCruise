@@ -14,8 +14,8 @@ public class FactoryDao implements AbstractFactory {
     }
 
     @Override
-    public CardDaoImpl createCardDao() {
-        return new CardDaoImpl();
+    public CartDaoImpl createCartDao() {
+        return new CartDaoImpl();
     }
 
     @Override
@@ -41,6 +41,11 @@ public class FactoryDao implements AbstractFactory {
     @Override
     public ExcursionImageDaoImpl createExcursionImageDao() {
         return new ExcursionImageDaoImpl();
+    }
+
+    @Override
+    public OrderDaoImpl createOrderDao() {
+        return new OrderDaoImpl();
     }
 
 

@@ -22,7 +22,6 @@ public class CountryAddCommand implements Command {
 
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
         countryService.addNewCountry(request);
         return new Redirect("/cruise/countrylist");
     }

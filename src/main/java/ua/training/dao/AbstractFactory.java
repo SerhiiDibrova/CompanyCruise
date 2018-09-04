@@ -8,7 +8,7 @@ public interface AbstractFactory {
 
     CountryDaoImpl createCountryDao();
 
-    CardDaoImpl createCardDao();
+    CartDaoImpl createCartDao();
 
     CruiseDaoImpl createCruiseDao();
 
@@ -19,4 +19,6 @@ public interface AbstractFactory {
     ShipImageDaoImpl createShipImageDao();
 
     ExcursionImageDaoImpl createExcursionImageDao();
+
+    OrderDaoImpl createOrderDao();
 }

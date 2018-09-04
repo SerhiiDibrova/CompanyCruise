@@ -15,7 +15,6 @@ public class SessionListener implements HttpSessionListener {
 
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
      logger.info("Session Listener begin");
         HashSet<String> loggedUsers = (HashSet<String>) httpSessionEvent
                 .getSession().getServletContext()

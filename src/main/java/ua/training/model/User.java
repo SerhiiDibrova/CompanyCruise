@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Objects;
 
 public class User implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -108,7 +109,6 @@ public class User implements Serializable {
     public Timestamp convertToTimestap(LocalDateTime localDateTime) {
         return Timestamp.valueOf(localDateTime);
     }
-
 
     @Override
     public String toString() {

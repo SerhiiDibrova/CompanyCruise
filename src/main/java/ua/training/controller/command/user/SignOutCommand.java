@@ -6,6 +6,7 @@ import ua.training.controller.command.Command;
 import ua.training.controller.command.servletAction.Forward;
 import ua.training.controller.command.servletAction.Redirect;
 import ua.training.controller.command.servletAction.ServletAction;
+import ua.training.controller.service.CartService;
 import ua.training.controller.util.SessionUtility;
 import ua.training.model.User;
 
@@ -17,13 +18,15 @@ import java.io.IOException;
 
 public class SignOutCommand implements Command {
     private final static Logger logger = Logger.getLogger(SignOutCommand.class);
-    public SignOutCommand(){}
+    private CartService cartService;
+    public SignOutCommand(){
+        this.cartService= new CartService();
+    }
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        logger.info("Log Out");
-        HttpSession session = request.getSession();
-        User user =null;
-        SessionUtility.setUserRole(request, User.Role.GUEST, user , "Guest");
+       cartService.deleteCartByUser((String) request.getSession().getAttribute("userName"));
+        request.getSession().invalidate();
         logger.info("Loged Out");
         return new Redirect("/cruise/index");
     }

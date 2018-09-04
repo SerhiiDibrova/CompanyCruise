@@ -2,6 +2,8 @@ package ua.training.controller.util;
 
 import ua.training.controller.exception.CommandException;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,6 +33,39 @@ public class Util {
             id = 0;
         }
         return id;
+    }
+
+    public static String calculateDuration(LocalDateTime from, LocalDateTime to) {
+        LocalDateTime fromTemp = LocalDateTime.from(from);
+        long years = fromTemp.until(to, ChronoUnit.YEARS);
+        fromTemp = fromTemp.plusYears(years);
+
+        long months = fromTemp.until(to, ChronoUnit.MONTHS);
+        fromTemp = fromTemp.plusMonths(months);
+
+        long days = fromTemp.until(to, ChronoUnit.DAYS);
+        fromTemp = fromTemp.plusDays(days);
+
+        long hours = fromTemp.until(to, ChronoUnit.HOURS);
+        fromTemp = fromTemp.plusHours(hours);
+
+        long minutes = fromTemp.until(to, ChronoUnit.MINUTES);
+        fromTemp = fromTemp.plusMinutes(minutes);
+
+        if (years != 0) {
+            return years + "years, " + months + "months, " + days + "d. " + hours + "hours, " + minutes + "minutes";
+        } else if (months != 0) {
+            return months + "months, " + days + "days, " + hours + "hours, " + minutes + "minutes";
+        } else if (days != 0) {
+            return days + "days, " + hours + "hours," + minutes + "minutes";
+        } else if (hours != 0) {
+            return hours + "hours," + minutes + "minutes";
+        } else if (minutes != 0) {
+            return minutes + "m.";
+        } else {
+            return null;
+        }
+
     }
 
 

@@ -14,9 +14,9 @@ public class CruiseMapper implements ObjectMapper<Cruise> {
         Cruise cruise = new Cruise();
         cruise.setId(rs.getInt("cruise_id"));
         cruise.setName(rs.getString("cruise_name"));
-       // cruise.getShip().setShip_id(rs.getInt("ship_id"));
-        /*cruise.getCountryFrom().setId(rs.getInt("cruise_city_from"));
-        cruise.getCountryTo().setId(rs.getInt("cruise_city_to"));*/
+         cruise.setShipById(rs.getInt("ship_id"));
+        cruise.setCountryFromById(rs.getInt("cruise_city_from"));
+        cruise.setCountryToById(rs.getInt("cruise_city_to"));
         cruise.setDeparture(cruise.convertToLocalDateTime(rs.getTimestamp("cruise_departure")));
         cruise.setArrival(cruise.convertToLocalDateTime(rs.getTimestamp("cruise_arrival")));
         cruise.setCategory(CruiseCategory.valueOf(rs.getString("cruise_category")));

@@ -56,12 +56,16 @@ public class ExcursionDaoImpl implements ExcursionDao {
     public Excursion findById(int id) {
         logger.info("Find by id");
         Excursion excursion = null;
+        ExcursionImage excursionImage = null;
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_EXCURSION_BY_ID);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 excursion = excursionMapper.extractFromResultSet(resultSet);
+                excursionImage = excursionImageMapper.extractFromResultSet(resultSet);
+                excursion.getExcursionImageList().add(excursionImage);
+                excursionImage.setExcursion(excursion);
                 logger.info("Founded : " + excursion.toString());
             }
         } catch (SQLException e) {
@@ -135,5 +139,35 @@ public class ExcursionDaoImpl implements ExcursionDao {
         } catch (SQLException e) {
             logger.error(e.toString());
         }
+    }
+
+    @Override
+    public List<Excursion> findByCountryId(int id) {
+        logger.info("Find by country id");
+        List<Excursion> excursionList = new ArrayList<>();
+        try (Connection connection = DataSourceConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_EXCURSION_COUNTRY_BY_ID);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                do{
+                    Excursion excursion =  null;
+                    ExcursionImage excursionImage=null;
+                    excursion = excursionMapper.extractFromResultSet(resultSet);
+                    excursionImage = excursionImageMapper.extractFromResultSet(resultSet);
+                    excursion.getExcursionImageList().add(excursionImage);
+                    excursionImage.setExcursion(excursion);
+                    logger.info("Founded : " + excursion.toString()+" and added to list");
+                    excursionList.add(excursion);
+                }while (resultSet.next());
+                }else{
+                excursionList=null;
+                logger.info("Excursion list is empty");
+            }
+        } catch (SQLException e) {
+            logger.error(e.toString());
+            return null;
+        }
+        return excursionList;
     }
 }

@@ -1,17 +1,35 @@
 package ua.training.controller.service.CartBean;
 
+import ua.training.model.Cart;
 import ua.training.model.Cruise;
 import ua.training.model.Excursion;
 
 import java.util.List;
 
 public class CartItemBean {
-    private List<Cruise> cruise;
+
+
+    private Cart cart;
+    private Cruise cruise;
     private List<Excursion> excursion;
     private long totalCost;
     CartItemBean(){}
+    public CartItemBean(Cart cart,Cruise cruise, List<Excursion> excursion){
+        this.cart=cart;
+        this.cruise=cruise;
+        this.excursion=excursion;
+    }
+    public Cart getCart() {
+        return cart;
+    }
 
-    public void setCruise(List<Cruise> cruise) {
+    public void setCart(Cart card) {
+        this.cart = cart;
+    }
+    public Cruise getCruise() {
+        return cruise;
+    }
+    public void setCruise(Cruise cruise) {
         this.cruise = cruise;
     }
 
@@ -23,11 +41,4 @@ public class CartItemBean {
         this.excursion = excursion;
     }
 
-    public long getTotalCost() {
-        return totalCost+cruise.stream().mapToLong(i-> i.getPrice()).sum();
-    }
-
-    public void setTotalCost(long totalCost) {
-        this.totalCost = totalCost;
-    }
 }

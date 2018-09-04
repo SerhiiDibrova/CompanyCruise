@@ -38,7 +38,9 @@ public class Authorization {
         authorization.put(Pattern.compile("/cruise/logout"), authorized);
         authorization.put(Pattern.compile("/cruise/profile"), authorized);
         authorization.put(Pattern.compile("/cruise/cruiselist"), authorized);
-        authorization.put(Pattern.compile("/card/\\d{1,5}"), authorized);
+        authorization.put(Pattern.compile("/cruise/cruise_card"), authorized);
+        authorization.put(Pattern.compile("/cruise/showcard"), authorized);
+        authorization.put(Pattern.compile("/cruise/pay"), authorized);
         authorization.put(Pattern.compile("/"), all);
     }
 

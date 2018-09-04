@@ -67,6 +67,20 @@ public class Excursion implements Serializable {
     public void setExcursionImageList(List<ExcursionImage> excursionImageList) {
         this.excursionImageList = excursionImageList;
     }
+    @Override
+    public int hashCode() {
+        return 31 * id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj != null && obj.getClass() == getClass()) {
+            Excursion e = (Excursion) obj;
+            return id == e.id;
+        }
+        return false;
+    }
 
     @Override
     public String toString() {
