@@ -34,6 +34,7 @@ public class CommandList {
         commands.put("cruise_card", new AddCartCommand());
         commands.put("showcard" , new ShowCartCommand());
         commands.put("pay", new PayCommand());
+        commands.put("profile", new ProfileCommand());
     }
 
     public Command getCommand(HttpServletRequest request) {

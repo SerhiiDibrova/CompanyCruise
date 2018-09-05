@@ -29,7 +29,7 @@ public class OrderMapper implements ObjectMapper<Order> {
     public void setPreparedStatement(PreparedStatement preparedStatement, Order order) throws SQLException {
         preparedStatement.setInt(1,order.getUser_id());
         preparedStatement.setInt(2,order.getCruise_id());
-        preparedStatement.setInt(3,order.getCruise_id());
+        preparedStatement.setInt(3,order.getExcursion_id());
         preparedStatement.setLong(4,order.getPrice_total());
     }
 

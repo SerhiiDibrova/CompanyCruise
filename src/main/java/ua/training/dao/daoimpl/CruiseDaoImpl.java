@@ -1,6 +1,7 @@
 package ua.training.dao.daoimpl;
 
 import org.apache.log4j.Logger;
+import ua.training.controller.service.CruiseService;
 import ua.training.dao.CruiseDao;
 import ua.training.dao.connection.DataSourceConnection;
 import ua.training.dao.mapper.CountryMapper;
@@ -66,7 +67,7 @@ public class CruiseDaoImpl implements CruiseDao {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 cruise = cruiseMapper.extractFromResultSet(resultSet);
-                logger.info("Founded : "+ cruise.toString());
+                logger.info("Founded : " + cruise.toString());
             }
         } catch (SQLException e) {
             logger.error(e.toString());
@@ -77,7 +78,7 @@ public class CruiseDaoImpl implements CruiseDao {
 
     @Override
     public List<Cruise> findAll() {
-        List <Cruise> list = new ArrayList<>();
+        List<Cruise> list = new ArrayList<>();
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -111,6 +112,8 @@ public class CruiseDaoImpl implements CruiseDao {
                     cruise.setShip(ship);
                     cruise.setCountryFrom(countryFrom);
                     cruise.setCountryTo(countryTo);
+                    logger.info("Added cruise to List  :" +cruise.toString() );
+
                     list.add(cruise);
                 } while (resultSet.next());
             } else {
@@ -119,47 +122,10 @@ public class CruiseDaoImpl implements CruiseDao {
         } catch (SQLException e) {
             logger.error(e.toString());
         }
-        logger.info("Added cruise to Map  :" + list.size());
-        logger.info("Added cruise to Map  :" + list.get(0).toString());
+
         return list;
     }
 
-    /* @Override
-     public List<Cruise> findAll() {
-         logger.info("find all");
-         Map<Integer, Cruise> cruises = new HashMap<>();
-         Map<Integer, Ship> ships = new HashMap<>();
-         Map<Integer , Country> countriesFrom = new HashMap<>();
-         Map<Integer , Country> countriesTo = new HashMap<>();
-         try (Connection connection = DataSourceConnection.getConnection()) {
-             PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL);
-             ResultSet resultSet = preparedStatement.executeQuery();
-             while (resultSet.next()) {
-                 Cruise cruise = cruiseMapper.extractFromResultSet(resultSet);
-                 Ship ship = shipMapper.extractFromResultSet(resultSet);
-                 Country countryFrom = countryMapper.extractFromResultSet(resultSet);
-                 Country countryTo = countryMapper.extractFromResultSet(resultSet);
-                 cruise = cruiseMapper.makeUnique(cruises, cruise);
-                 ship = shipMapper.makeUnique(ships,ship);
-                 countryFrom = countryMapper.makeUnique(countriesFrom,countryFrom);
-                 countryTo=countryMapper.makeUnique(countriesTo,countryTo);
-                 cruise.setShip(ship);
-                // cruise.setCountryFrom(countryFrom);
-                // cruise.setCountryTo(countryTo);
-                // ship.setCruise(cruise);
-                cruise.setCountryFrom(countryFrom);
-                cruise.setCountryTo(countryTo);
-                 cruises.put(cruise.getId(), cruise);
-                 logger.info("Added cruise to Map  :" + cruise.toString());
-             }
-
-             return new ArrayList<>(cruises.values());
-         } catch (SQLException e) {
-             logger.error(e.toString());
-             return null;
-         }
-     }
- */
     @Override
     public void update(Cruise cruise) {
         try (Connection connection = DataSourceConnection.getConnection()) {
@@ -185,7 +151,7 @@ public class CruiseDaoImpl implements CruiseDao {
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_CRUISE_BY_ID);
             preparedStatement.setInt(1, id);
-            boolean result = preparedStatement.execute();
+            boolean result = preparedStatement.executeUpdate() > 0;
             if (result) {
                 connection.commit();
                 logger.info("Cruise " + cruiseName + " was deleted!");
@@ -196,6 +162,75 @@ public class CruiseDaoImpl implements CruiseDao {
 
         } catch (SQLException e) {
             logger.error(e.toString());
+        }
+    }
+
+    @Override
+    public List<Cruise> findAllWithLimit(int offset) {
+        logger.info("Find all cruise with limit " + CruiseService.LIMIT_CRUISE + " and offset " + offset);
+        List<Cruise> list = new ArrayList<>();
+        try (Connection connection = DataSourceConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_WITH_LIMIT);
+            preparedStatement.setInt(1, offset);
+            preparedStatement.setInt(2, CruiseService.LIMIT_CRUISE);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                do {
+                    Cruise cruise = new Cruise();
+                    Ship ship = new Ship();
+                    ShipImage shipImage = new ShipImage();
+                    Country countryFrom = new Country();
+                    Country countryTo = new Country();
+                    cruise.setId(resultSet.getInt("cruise_id"));
+                    cruise.setName(resultSet.getString("cruise_name"));
+                    ship.setShip_id(resultSet.getInt("ship_id"));
+                    ship.setName(resultSet.getString("ship_name"));
+                    ship.setCapacity(resultSet.getInt("ship_capacity"));
+                    shipImage.setId(resultSet.getInt("shipimage_id"));
+                    shipImage.setUri(resultSet.getString("shipimage_uri"));
+                    countryFrom.setId(resultSet.getInt("country_from_id"));
+                    countryFrom.setName(resultSet.getString("country_from_name"));
+                    countryFrom.setCity(resultSet.getString("country_from_city"));
+                    countryTo.setId(resultSet.getInt("country_to_id"));
+                    countryTo.setName(resultSet.getString("country_to_name"));
+                    countryTo.setCity(resultSet.getString("country_to_city"));
+                    cruise.setDeparture(cruise.convertToLocalDateTime(resultSet.getTimestamp("cruise_departure")));
+                    cruise.setArrival(cruise.convertToLocalDateTime(resultSet.getTimestamp("cruise_arrival")));
+                    cruise.setCategory(CruiseCategory.valueOf(resultSet.getString("cruise_category")));
+                    cruise.setCountPort(resultSet.getInt("cruise_count_port"));
+                    cruise.setPrice(resultSet.getLong("cruise_price"));
+                    ship.getShipImageList().add(shipImage);
+                    shipImage.setShip(ship);
+                    cruise.setShip(ship);
+                    cruise.setCountryFrom(countryFrom);
+                    cruise.setCountryTo(countryTo);
+                    logger.info("Added cruise to List : "+cruise.toString());
+                    list.add(cruise);
+                } while (resultSet.next());
+            } else {
+                logger.error("Result Set is empty!");
+            }
+        } catch (SQLException e) {
+             logger.error(e.toString());
+        }
+
+        return list;
+    }
+
+    @Override
+    public int countCruise() {
+
+        try (Connection connection = DataSourceConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(COUNT_CRUISE);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+            return 0;
+
+        } catch (SQLException e) {
+          logger.error(e.toString());
+            throw new RuntimeException(e);
         }
     }
 }

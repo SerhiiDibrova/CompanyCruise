@@ -11,11 +11,17 @@ public class Order {
     private int cruise_id;
     private int excursion_id;
     private User user;
-    private List<Cruise> cruise = new ArrayList<>();
+    private Cruise cruise ;
     private List<Excursion> excursion = new ArrayList<>();
     private long price_total;
 
     public Order() {
+    }
+
+    public Order(User user, Cruise cruise, List<Excursion> excursion) {
+        this.user = user;
+        this.cruise = cruise;
+        this.excursion = excursion;
     }
 
     public int getOrder_id() {
@@ -42,11 +48,11 @@ public class Order {
         this.user = user;
     }
 
-    public List<Cruise> getCruise() {
+    public Cruise getCruise() {
         return cruise;
     }
 
-    public void setCruise(List<Cruise> cruise) {
+    public void setCruise(Cruise cruise) {
         this.cruise = cruise;
     }
 

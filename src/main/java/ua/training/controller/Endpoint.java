@@ -10,7 +10,6 @@ public class Endpoint {
     public static final String REGISTER_FORM = "REGISTER_FORM";
     public static final String INDEX_FORM = "INDEX_FORM";
     public static final String ERROR_FORM = "ERROR_FORM";
-    public static final String ADMIN_FORM = "ADMIN_FORM";
     public static final String COUNTRY_FORM = "COUNTRY_FORM";
     public static final String COUNTRY_LIST_FORM = "COUNTRY_LIST_FORM";
     public static final String SHIP_LIST_FORM = "SHIP_LIST_FORM";
@@ -18,6 +17,8 @@ public class Endpoint {
     public static final String CRUISE_LIST_FORM = "CRUISE_LIST_FORM";
     public static final String CARD_LIST_FORM = "CARD_LIST_FORM";
     public static final String SUCCES_FORM ="SUCCES_FORM";
+    public static final String PROFILE_FORM="PROFILE_FORM";
+
 
     public static Endpoint getInstance(){
         if (instance == null){

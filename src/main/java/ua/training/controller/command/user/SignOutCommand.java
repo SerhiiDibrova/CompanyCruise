@@ -24,10 +24,10 @@ public class SignOutCommand implements Command {
     }
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       logger.info("Log Out");
-       cartService.deleteCartByUser((String) request.getSession().getAttribute("userName"));
+        logger.info("Log Out");
+        cartService.deleteCartByUser((String) request.getSession().getAttribute("userName"));
         request.getSession().invalidate();
         logger.info("Loged Out");
-        return new Redirect("/cruise/index");
+        return new Redirect("/wilddolphin");
     }
 }

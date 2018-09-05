@@ -14,6 +14,7 @@ ua\training\controller\command\user\CountryCommand.class
 ua\training\controller\command\user\CountryShowListCommand.class
 ua\training\controller\exception\UniqueException.class
 ua\training\controller\command\servletAction\Forward.class
+ua\training\controller\command\user\ProfileCommand.class
 ua\training\controller\service\CountryService.class
 ua\training\controller\service\OrderService.class
 ua\training\dao\query\ExcursionImageQuery.class
@@ -26,7 +27,6 @@ ua\training\controller\command\user\PayCommand.class
 ua\training\controller\service\CartService.class
 ua\training\model\User.class
 ua\training\dao\query\ShipQuery.class
-ua\training\controller\service\CartBean\CartItemBean.class
 ua\training\model\CruiseCategory.class
 ua\training\dao\ShipImageDao.class
 ua\training\model\ExcursionImage.class
@@ -63,6 +63,7 @@ ua\training\dao\CountryDao.class
 ua\training\dao\daoimpl\CountryDaoImpl.class
 ua\training\controller\command\user\RegisterCommand.class
 ua\training\dao\query\UserQuery.class
+ua\training\controller\service\Bean\OrderItemBean.class
 ua\training\dao\mapper\ShipImageMapper.class
 ua\training\dao\query\ExcursionQuery.class
 ua\training\dao\daoimpl\ShipImageDaoImpl.class
@@ -79,6 +80,7 @@ ua\training\dao\ExcursionImageDao.class
 ua\training\controller\command\user\ShowCartCommand.class
 ua\training\controller\command\user\CruiseListCommand.class
 ua\training\dao\daoimpl\ExcursionImageDaoImpl.class
+ua\training\controller\service\Bean\CartItemBean.class
 ua\training\dao\mapper\ObjectMapper.class
 ua\training\controller\command\servletAction\ServletAction.class
 ua\training\dao\FactoryDao.class

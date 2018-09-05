@@ -44,6 +44,7 @@ F:\CompanyCruise\src\main\java\ua\training\dao\daoimpl\CruiseDaoImpl.java
 F:\CompanyCruise\src\main\java\ua\training\dao\query\ShipQuery.java
 F:\CompanyCruise\src\main\java\ua\training\controller\command\user\ShipListCommand.java
 F:\CompanyCruise\src\main\java\ua\training\model\Cruise.java
+F:\CompanyCruise\src\main\java\ua\training\controller\command\user\ProfileCommand.java
 F:\CompanyCruise\src\main\java\ua\training\dao\mapper\CruiseMapper.java
 F:\CompanyCruise\src\main\java\ua\training\controller\command\user\CruiseListCommand.java
 F:\CompanyCruise\src\main\java\ua\training\dao\query\ShipImageQuery.java
@@ -63,7 +64,6 @@ F:\CompanyCruise\src\main\java\ua\training\dao\connection\DataSourceConnection.j
 F:\CompanyCruise\src\main\java\ua\training\controller\command\Command.java
 F:\CompanyCruise\src\main\java\ua\training\controller\command\user\SignUpCommand.java
 F:\CompanyCruise\src\main\java\ua\training\dao\query\CountryQuery.java
-F:\CompanyCruise\src\main\java\ua\training\controller\service\CartBean\CartItemBean.java
 F:\CompanyCruise\src\main\java\ua\training\controller\listener\SessionListener.java
 F:\CompanyCruise\src\main\java\ua\training\controller\command\servletAction\Redirect.java
 F:\CompanyCruise\src\main\java\ua\training\dao\mapper\UserMapper.java
@@ -71,6 +71,7 @@ F:\CompanyCruise\src\main\java\ua\training\dao\CountryDao.java
 F:\CompanyCruise\src\main\java\ua\training\dao\daoimpl\ShipDaoImpl.java
 F:\CompanyCruise\src\main\java\ua\training\dao\daoimpl\OrderDaoImpl.java
 F:\CompanyCruise\src\main\java\ua\training\dao\CartDao.java
+F:\CompanyCruise\src\main\java\ua\training\controller\service\Bean\CartItemBean.java
 F:\CompanyCruise\src\main\java\ua\training\model\CruiseCategory.java
 F:\CompanyCruise\src\main\java\ua\training\controller\util\SessionUtility.java
 F:\CompanyCruise\src\main\java\ua\training\controller\util\Util.java
@@ -80,6 +81,7 @@ F:\CompanyCruise\src\main\java\ua\training\controller\command\user\PayCommand.ja
 F:\CompanyCruise\src\main\java\ua\training\dao\mapper\ExcursionImageMapper.java
 F:\CompanyCruise\src\main\java\ua\training\dao\query\CruiseQuery.java
 F:\CompanyCruise\src\main\java\ua\training\model\Order.java
+F:\CompanyCruise\src\main\java\ua\training\controller\service\Bean\OrderItemBean.java
 F:\CompanyCruise\src\main\java\ua\training\dao\mapper\CartMapper.java
 F:\CompanyCruise\src\main\java\ua\training\controller\command\user\LoginCommand.java
 F:\CompanyCruise\src\main\java\ua\training\dao\daoimpl\CartDaoImpl.java

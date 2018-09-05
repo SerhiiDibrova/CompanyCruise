@@ -25,22 +25,23 @@ public class Authorization {
                 Collections.singletonList(User.Role.ADMIN)
         );
         authorization = new HashMap<>();
-        authorization.put(Pattern.compile("/cruise/login"), unauthorized);
-        authorization.put(Pattern.compile("/cruise/registration"), unauthorized);
-        authorization.put(Pattern.compile("/cruise/signin"), unauthorized);
-        authorization.put(Pattern.compile("/cruise/signup"), unauthorized);
-        authorization.put(Pattern.compile("/cruise/index"), all);
-        authorization.put(Pattern.compile("/cruise"), all);
-        authorization.put(Pattern.compile("/cruise/countrylist"), authorized);
-        authorization.put(Pattern.compile("/cruise/shiplist"), authorized);
-        authorization.put(Pattern.compile("/cruise/excursionlist"), authorized);
-        authorization.put(Pattern.compile("/cruise/country"), authorized);
-        authorization.put(Pattern.compile("/cruise/logout"), authorized);
-        authorization.put(Pattern.compile("/cruise/profile"), authorized);
-        authorization.put(Pattern.compile("/cruise/cruiselist"), authorized);
-        authorization.put(Pattern.compile("/cruise/cruise_card"), authorized);
-        authorization.put(Pattern.compile("/cruise/showcard"), authorized);
-        authorization.put(Pattern.compile("/cruise/pay"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/login"), unauthorized);
+        authorization.put(Pattern.compile("/wilddolphin/registration"), unauthorized);
+        authorization.put(Pattern.compile("/wilddolphin/signin"), unauthorized);
+        authorization.put(Pattern.compile("/wilddolphin/signup"), unauthorized);
+        authorization.put(Pattern.compile("/wilddolphin/index"), all);
+        authorization.put(Pattern.compile("/wilddolphin"), all);
+        authorization.put(Pattern.compile("/wilddolphin/countrylist"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/shiplist"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/excursionlist"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/country"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/logout"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/profile"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/cruiselist"), all);
+        authorization.put(Pattern.compile("/wilddolphin/cruise_card"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/showcard"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/pay"), authorized);
+        authorization.put(Pattern.compile("/wilddolphin/cruiselist/\\d{1,9}"),all);
         authorization.put(Pattern.compile("/"), all);
     }
 

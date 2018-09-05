@@ -1,4 +1,4 @@
-package ua.training.controller.service.CartBean;
+package ua.training.controller.service.Bean;
 
 import ua.training.model.Cart;
 import ua.training.model.Cruise;
@@ -12,7 +12,6 @@ public class CartItemBean {
     private Cart cart;
     private Cruise cruise;
     private List<Excursion> excursion;
-    private long totalCost;
     CartItemBean(){}
     public CartItemBean(Cart cart,Cruise cruise, List<Excursion> excursion){
         this.cart=cart;

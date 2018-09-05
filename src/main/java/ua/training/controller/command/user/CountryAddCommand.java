@@ -23,6 +23,6 @@ public class CountryAddCommand implements Command {
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         countryService.addNewCountry(request);
-        return new Redirect("/cruise/countrylist");
+        return new Redirect("/wilddolphin/countrylist");
     }
 }

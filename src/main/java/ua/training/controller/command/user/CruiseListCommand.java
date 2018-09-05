@@ -6,6 +6,7 @@ import ua.training.controller.command.servletAction.Forward;
 import ua.training.controller.command.servletAction.ServletAction;
 import ua.training.controller.service.CruiseService;
 import ua.training.controller.service.ExcursionService;
+import ua.training.controller.util.Util;
 import ua.training.model.Cruise;
 import ua.training.model.Excursion;
 
@@ -26,8 +27,22 @@ public class CruiseListCommand implements Command {
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session =request.getSession();
-        List<Cruise> cruises = cruiseService.showListContry();
-        session.setAttribute("cruises", cruises);
+        //List<Cruise> cruises = cruiseService.showListCruise();
+        int quantity = cruiseService.quantityOfPages();
+        int page = Util.getIdFromURI(request.getRequestURI());
+        System.out.println("DDDDDDDDDDDDDDDDDDDDDDDD"+page);
+        putCruises(request,page);
+        int maxPage = Util.getPage(quantity, page);
+        request.setAttribute("page", maxPage);
+        request.setAttribute("pathPage", "cruiselist");
+        //session.setAttribute("cruises", cruises);
         return new Forward(Endpoint.getInstance().getProperty(Endpoint.CRUISE_LIST_FORM));
+    }
+    private void putCruises(HttpServletRequest request, int page) {
+        if (page == 0) {
+            request.setAttribute("cruises", cruiseService.showListCruiseWithLimit(1));
+        } else {
+            request.setAttribute("cruises", cruiseService.showListCruiseWithLimit(page));
+        }
     }
 }

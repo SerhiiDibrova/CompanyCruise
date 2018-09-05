@@ -1,12 +1,15 @@
 package ua.training.controller.service;
 
 import org.apache.log4j.Logger;
-import ua.training.controller.service.CartBean.CartItemBean;
+import ua.training.controller.service.Bean.CartItemBean;
+import ua.training.controller.service.Bean.OrderItemBean;
 import ua.training.dao.AbstractFactory;
 import ua.training.dao.FactoryDao;
 import ua.training.dao.daoimpl.*;
 import ua.training.model.Cruise;
+import ua.training.model.Excursion;
 import ua.training.model.Order;
+import ua.training.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +51,7 @@ public class OrderService {
         order.setUser_id(userDao.findByLogin(userLogin).getId());
         order.setCruise_id(cruiseId);
         order.setPrice_total(cruiseDao.findById(cruiseId).getPrice() + excursionDao.findById(excursionId).getPrice());
+        System.out.println("SSSSSSSSSSSSSSSSSSSS"+String.valueOf(excursionId));
         order.setExcursion_id(excursionId);
         Boolean result = orderDao.create(order);
         if (result) {
@@ -80,5 +84,25 @@ public class OrderService {
             cartItemBeans = null;
         }
         return cartItemBeans;
+    }
+
+    public List<OrderItemBean> showListOrderByUser(User user){
+        logger.info("show list order by Login" + user.getLogin());
+        List<Order> orderList = orderDao.findUserById(user.getId());
+        List<OrderItemBean> orderItemBeans = new ArrayList<>();
+        if (orderList != null) {
+            for (Order order : orderList) {
+                Cruise cruise = cruiseDao.findById(order.getCruise_id());
+                cruise.setCountryFrom(countryDao.findById(cruise.getCountryFromById()));
+                cruise.setCountryTo(countryDao.findById(cruise.getCountryToById()));
+                cruise.setShip(shipDao.findById(cruise.getShipById()));
+                Excursion excursion = excursionDao.findById(order.getExcursion_id());
+                orderItemBeans.add(new OrderItemBean(order,cruise,excursion));
+            }
+        } else {
+            orderItemBeans = null;
+        }
+
+        return orderItemBeans;
     }
 }

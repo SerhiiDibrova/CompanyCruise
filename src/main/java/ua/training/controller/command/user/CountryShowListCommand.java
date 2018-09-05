@@ -27,7 +27,6 @@ public class CountryShowListCommand implements Command {
         HttpSession session =request.getSession();
         List countries = countryService.showListContry();
             session.setAttribute("countries", countries);
-            System.out.println("===================================="+countries.toString());
             return new Forward(Endpoint.getInstance().getProperty(Endpoint.COUNTRY_LIST_FORM));
         }
     }

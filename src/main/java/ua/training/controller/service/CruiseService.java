@@ -14,6 +14,7 @@ import java.util.List;
 
 public class CruiseService {
     private final static Logger logger = Logger.getLogger(CruiseService.class);
+    public static final int LIMIT_CRUISE=2;
     private CruiseDao cruiseDao;
     private AbstractFactory factoryDao;
 
@@ -53,9 +54,22 @@ public class CruiseService {
 
     }*/
 
-    public List showListContry(){
+    public List showListCruise(){
         logger.info("show list cruise");
         List<Cruise> list = cruiseDao.findAll();
         return list;
+    }
+    public List showListCruiseWithLimit(int page){
+        logger.info("show list cruise");
+        List<Cruise> list = cruiseDao.findAllWithLimit(offset(page));
+        return list;
+    }
+
+    private int offset(int pageNumber) {
+        return (pageNumber * LIMIT_CRUISE) - LIMIT_CRUISE;
+    }
+
+    public int quantityOfPages() {
+        return cruiseDao.countCruise();
     }
 }

@@ -1,6 +1,7 @@
 package ua.training.controller.util;
 
 import ua.training.controller.exception.CommandException;
+import ua.training.controller.service.CruiseService;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -66,6 +67,14 @@ public class Util {
             return null;
         }
 
+    }
+    public static int getPage(int quantity, int page) {
+        int limitCruise= CruiseService.LIMIT_CRUISE;
+        int maxPage = (quantity % limitCruise == 0) ? quantity / limitCruise :
+                quantity / limitCruise + 1;
+        if (page > maxPage)
+            throw new CommandException("so big page number");
+        return maxPage;
     }
 
 

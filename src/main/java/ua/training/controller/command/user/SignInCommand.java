@@ -32,10 +32,10 @@ public class SignInCommand implements Command {
                 return new Forward("/error");
             }
             SessionUtility.setUserRole(request,user.getRole(),user);
-            return new Redirect("/cruise");
+            return new Redirect("/wilddolphin");
         }else{
             session.setAttribute("message", "Eror email or password");
-            return  new Redirect("/cruise/login");
+            return  new Redirect("/wilddolphin/login");
         }
     }
 }

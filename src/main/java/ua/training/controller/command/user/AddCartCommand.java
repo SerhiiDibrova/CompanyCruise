@@ -24,10 +24,10 @@ public class AddCartCommand implements Command {
         String addResult = cartService.addCartToUser(login,cruiseID);
         if (addResult != null) {
             session.setAttribute("msg", addResult);
-            return new Redirect("/cruise/cruiselist");
+            return new Redirect("/wilddolphin/cruiselist");
         } else {
             session.setAttribute("msg", "Something wrong!!!");
-            return new Redirect("/cruise/cruiselist");
+            return new Redirect("/wilddolphin/cruiselist");
         }
 
     }

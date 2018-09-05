@@ -1,7 +1,7 @@
 package ua.training.controller.service;
 
 import org.apache.log4j.Logger;
-import ua.training.controller.service.CartBean.CartItemBean;
+import ua.training.controller.service.Bean.CartItemBean;
 import ua.training.dao.AbstractFactory;
 import ua.training.dao.FactoryDao;
 import ua.training.dao.daoimpl.*;
