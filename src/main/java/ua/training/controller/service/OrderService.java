@@ -51,7 +51,6 @@ public class OrderService {
         order.setUser_id(userDao.findByLogin(userLogin).getId());
         order.setCruise_id(cruiseId);
         order.setPrice_total(cruiseDao.findById(cruiseId).getPrice() + excursionDao.findById(excursionId).getPrice());
-        System.out.println("SSSSSSSSSSSSSSSSSSSS"+String.valueOf(excursionId));
         order.setExcursion_id(excursionId);
         Boolean result = orderDao.create(order);
         if (result) {
@@ -98,6 +97,27 @@ public class OrderService {
                 cruise.setShip(shipDao.findById(cruise.getShipById()));
                 Excursion excursion = excursionDao.findById(order.getExcursion_id());
                 orderItemBeans.add(new OrderItemBean(order,cruise,excursion));
+            }
+        } else {
+            orderItemBeans = null;
+        }
+
+        return orderItemBeans;
+    }
+
+    public List<OrderItemBean> findAllOrders(){
+        logger.info("Find all order from DB" );
+        List<Order> orderList = orderDao.findAll();
+        List<OrderItemBean> orderItemBeans = new ArrayList<>();
+        if (orderList != null) {
+            for (Order order : orderList) {
+                User user = userDao.findById(order.getUser_id());
+                Cruise cruise = cruiseDao.findById(order.getCruise_id());
+                cruise.setCountryFrom(countryDao.findById(cruise.getCountryFromById()));
+                cruise.setCountryTo(countryDao.findById(cruise.getCountryToById()));
+                cruise.setShip(shipDao.findById(cruise.getShipById()));
+                Excursion excursion = excursionDao.findById(order.getExcursion_id());
+                orderItemBeans.add(new OrderItemBean(user,order,cruise,excursion));
             }
         } else {
             orderItemBeans = null;

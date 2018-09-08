@@ -4,6 +4,10 @@ import org.apache.log4j.Logger;
 import ua.training.controller.command.Command;
 import ua.training.controller.command.NoCommand;
 import ua.training.controller.command.WelcomePageCommand;
+import ua.training.controller.command.admin.CountryDeleteCommand;
+import ua.training.controller.command.admin.CountryEditCommand;
+import ua.training.controller.command.admin.CountryUpdateCommand;
+import ua.training.controller.command.admin.OrderAllCommand;
 import ua.training.controller.command.user.*;
 import ua.training.controller.util.Util;
 
@@ -21,20 +25,26 @@ public class CommandList {
         commands.put("registration", new RegisterCommand());
         commands.put("signin", new SignInCommand());
         commands.put("signup" , new SignUpCommand());
-        commands.put("index", new WelcomePageCommand());
-        commands.put("cruise", new WelcomePageCommand());
-        commands.put("country" , new CountryCommand());
-        commands.put("countrylist", new CountryShowListCommand());
-        commands.put("countryadd", new CountryAddCommand());
-        commands.put("shiplist", new ShipListCommand());
-        commands.put("cruiselist", new CruiseListCommand());
+        commands.put("main", new WelcomePageCommand());
+        commands.put("country", new CountryShowListCommand());
+        commands.put("countryadd" , new CountryCommand());
+        commands.put("countryadded", new CountryAddCommand());
+        commands.put("countryedit", new CountryEditCommand());
+        commands.put("countrydelete", new CountryDeleteCommand());
+        commands.put("countryupdate", new CountryUpdateCommand());
+        commands.put("ship", new ShipListCommand());
+        commands.put("cruise", new CruiseListCommand());
         commands.put("excursionlist",new ExcursionListCommand());
         commands.put("logout" , new SignOutCommand());
         commands.put("error", new NoCommand());
         commands.put("cruise_card", new AddCartCommand());
-        commands.put("showcard" , new ShowCartCommand());
+        commands.put("orderall", new OrderAllCommand());
+        commands.put("cart" , new ShowCartCommand());
         commands.put("pay", new PayCommand());
         commands.put("profile", new ProfileCommand());
+        commands.put("aboutus", new AboutUsCommand());
+        commands.put("contact", new ContactCommand());
+
     }
 
     public Command getCommand(HttpServletRequest request) {

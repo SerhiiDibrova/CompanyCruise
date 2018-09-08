@@ -1,30 +1,48 @@
-<%@ page isELIgnored="false" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="static/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country List</title>
+    <c:import url="static/head.jsp"/>
+    <c:import url="static/table.jsp"/>
+
 </head>
 <body>
-<div align="center">
-    <p align="center"><label class="colortext"> ${msg} </label></p>
-    <table>
-        <h2>Country List</h2>
-        <tr>
-        <tr>
-            <th width="120">id</th>
-            <th width="120">name</th>
-            <th width="120">city</th>
-        </tr>
-        </tr>
-        <c:forEach var="country" items="${countries}">
-            <tr>
-                <td><c:out value="${country.id}"/></td>
-                <td><c:out value="${country.name}"/></td>
-                <td><c:out value="${country.city}"/></td
-            </tr>
-        </c:forEach>
+<c:import url="static/menu.jsp"/>
+<div id="wrapper">
+<h1>Countries List</h1>
+
+<table id="keywords" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+    <th><span>id</span></th>
+    <th><span>Name</span></th>
+    <th><span>City</span></th>
+    <th colspan="2"><span>Action</span></th>
+</tr>
+</thead>
+<c:forEach var="country" items="${countries}">
+    <tbody>
+    <tr>
+    <td class="lalign"><c:out value="${country.id}"/></td>
+    <td class="lalign"><c:out value="${country.name}"/></td>
+    <td class="lalign"><c:out value="${country.city}"/></td>
+        <td class="lalign">
+            <a href="${pageContext.request.contextPath}/countryedit?id=<c:out value='${country.id}' />" class="btn btn-warning btn-sm"><fmt:message key="label.button.edit"/></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/countrydelete?id=<c:out value='${country.id}' />" class="btn btn-success btn-sm"><fmt:message key="label.button.delete"/></a>
+        </td>
+    </tr>
+    </tbody>
+</c:forEach>
     </table>
-</div>
-</body>
-</html>
+    <div align = "center">
+    <a href="${pageContext.request.contextPath}/countryadd?id=<c:out value='${country.id}' />"
+       class="btn btn-primary btn-sm">Add</a>
+    </div>
+    </div>
+    </body>
+    </html>

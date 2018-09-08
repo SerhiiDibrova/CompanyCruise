@@ -1,64 +1,51 @@
-<%@ page isELIgnored="false" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="static/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 5px;
-            text-align: left;
-        }
-    </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ship List</title>
+    <c:import url="static/head.jsp"/>
+    <c:import url="static/table.jsp"/>
 </head>
 <body>
-<div align="center">
-    <p align="center"><label class="colortext"> ${msg} </label></p>
-    <table style="width:100%">
-        <h2>Ship List</h2>
+<c:import url="static/menu.jsp"/>
+<div id="wrapper">
+    <h1>Ships List</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th><span>id</span></th>
+            <th><span>Name</span></th>
+            <th><span>Capacity</span></th>
+            <th><span>URI image</span></th>
+            <th colspan="2"><span>Action</span></th>
+        </tr>
+        </thead>
         <c:forEach var="ship" items="${ships}">
+            <tbody>
             <tr>
-                <th>ship_ID</th>
-                <td><c:out value="${ship.ship_id}"/></td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td><c:out value="${ship.name}"/></td>
-            </tr>
-            <tr>
-                <th>Capacity</th>
-                <td><c:out value="${ship.capacity}"/></td
-            </tr>
-            <c:forEach var="image" items="${ship.shipImageList}">
-                <tr>
-                    <th>URI</th>
-                    <td><c:out value="${image.uri}"/></td>
-                </tr>
+                <td class="lalign"><c:out value="${ship.ship_id}"/></td>
+                <td class="lalign"><c:out value="${ship.name}"/></td>
+                <td class="lalign" align="center"><c:out value="${ship.capacity}"/></td>
+                <c:forEach var="image" items="${ship.shipImageList}">
+
+                <td><c:out value="${image.uri}"/></td>
             </c:forEach>
-            <tr>
-                <th>&nbsp</th>
-                <td>&nbsp</td>
+                <td class="lalign">
+                    <a href="/shipedit?id=<c:out value='${ship.ship_id}' />" class="btn btn-warning btn-sm"><fmt:message key="label.button.edit"/></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/shipdelete?id=<c:out value='${ship.ship_id}' />" class="btn btn-success btn-sm"><fmt:message key="label.button.delete"/></a>
+                </td>
             </tr>
+            </tbody>
         </c:forEach>
     </table>
+    <div align = "center">
+        <a href="${pageContext.request.contextPath}/shipadd?id=<c:out value='${ship.ship_id}' />"
+           class="btn btn-primary btn-sm">Add</a>
+    </div>
 </div>
-
-
 </body>
 </html>

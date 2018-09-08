@@ -96,7 +96,7 @@ public class OrderDaoImpl implements OrderDao {
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ORDER_BY_ID);
             preparedStatement.setInt(1, id);
-            boolean result = preparedStatement.execute();
+            boolean result = preparedStatement.executeUpdate()>0;
             if (result) {
                 connection.commit();
                 logger.info("Order " + id + " was deleted!");

@@ -21,7 +21,6 @@ public class SignUpCommand implements Command {
 
     @Override
     public ServletAction execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      //  Forward forward = new Forward(Endpoint.getInstance().getProperty(Endpoint.REGISTER_FORM));
         userService.registration(request);
         return new Forward(Endpoint.getInstance().getProperty(Endpoint.LOGIN_FORM));
     }

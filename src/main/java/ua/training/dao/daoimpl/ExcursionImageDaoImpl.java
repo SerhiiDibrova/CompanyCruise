@@ -112,7 +112,7 @@ public class ExcursionImageDaoImpl implements ExcursionImageDao {
         try (Connection connection = DataSourceConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_EXCURSION_IMAGE_BY_ID);
             preparedStatement.setInt(1, id);
-            boolean result = preparedStatement.execute();
+            boolean result = preparedStatement.executeUpdate()>0;
             if (result) {
                 connection.commit();
                 logger.info("Excursion Image ID :" + id + " was deleted!");

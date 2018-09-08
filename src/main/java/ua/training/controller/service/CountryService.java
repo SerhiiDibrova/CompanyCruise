@@ -39,5 +39,25 @@ public class CountryService {
          return list;
     }
 
+    public Country findById(int id){
+        Country country = countryDao.findById(id);
+        return country;
+    }
+
+    public void updateCountry(HttpServletRequest request){
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String city = request.getParameter("city");
+        Country country = new Country(id,name,city);
+        countryDao.update(country);
+        logger.info("Updated : "+country.toString());
+    }
+
+    public void deleteById(HttpServletRequest request){
+        int id = Integer.parseInt(request.getParameter("id"));
+        countryDao.delete(id);
+        logger.info("Deleted country : " + id);
+    }
+
 
 }

@@ -18,6 +18,9 @@ public class Endpoint {
     public static final String CARD_LIST_FORM = "CARD_LIST_FORM";
     public static final String SUCCES_FORM ="SUCCES_FORM";
     public static final String PROFILE_FORM="PROFILE_FORM";
+    public static final String ABOUT_FORM="ABOUT_FORM";
+    public static final String CONTACT_FORM="CONTACT_FORM";
+    public static final String ORDER_ALL_FORM="ORDER_ALL_FORM";
 
 
     public static Endpoint getInstance(){
