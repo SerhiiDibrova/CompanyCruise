@@ -24,15 +24,7 @@
                 <li ><a href="${pageContext.request.contextPath}/main">Main<span
                         class="sr-only">(current)</span></a></li>
                 <li><a href="${pageContext.request.contextPath}/cruise"> Cruise </a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Language<span
-                            class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="${pageContext.request.contextPath}/?language=uk">Ukrainian</a></li>
-                        <li><a href="${pageContext.request.contextPath}/?language=en">English</a></li>
-                        <li class="divider"></li>
-                    </ul>
-                </li>
+
                 <li><a href="${pageContext.request.contextPath}/aboutus">About us</a></li>
                 <c:if test="${sessionScope.role == 'ADMIN' }">
                      <li class="dropdown">
@@ -78,8 +70,21 @@
                     </c:otherwise>
                 </c:choose>
             </ul>
+            <%--------------Language--%>
+            <form class="navbar-form" >
+                <select id="language" name="language" onchange="submit()">
+                    <option value="en" ${language == 'en' ? 'selected' : ''}><fmt:message key="label.lang.en"/></option>
+                    <option value="uk" ${language == 'uk' ? 'selected' : ''}><fmt:message key="label.lang.uk"/></option>
+
+                </select>
+            </form>
+            <%--------------Language--%>
+
         </div><!-- /.navbar-collapse -->
+
     </div><!-- /.container -->
+
 </nav>
 <!-- NAVBAR END -->
+
 

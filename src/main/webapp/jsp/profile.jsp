@@ -1,70 +1,78 @@
-<%@ page isELIgnored="false" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="static/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Profile</title>
+    <c:import url="static/head.jsp"/>
+    <c:import url="static/table.jsp"/>
 </head>
 <body>
-<div align="center">
-    <p align="center"><label class="colortext"> ${msg} </label></p>
-    <h2>My Profile</h2>
-    <div class="row">
-        <c:forEach var="order" items="${orderItemBeans}">
-            <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                    <c:forEach var="image" items="${order.cruise.ship.shipImageList}">
-                        <img class="card-img-top" src="<c:out value="${image.uri}"/>/100px180/" alt="Card image cap">
-                    </c:forEach>
-                    <div class="card-body">
-                        <h5 class="card-title"><c:out value="${order.cruise.name}"/></h5>
-                        <p class="card-text">cruise id:<c:out value="${order.cruise.id}"/></p>
-                        <p class="card-text">ship name :<c:out value="${order.cruise.ship.name}"/></p>
-                        <p class="card-text">country from name : <c:out value="${order.cruise.countryFrom.name}"/>(<c:out
-                                value="${order.cruise.countryFrom.city}"/>) </p>
-                        <p class="card-text">country to name : <c:out value="${order.cruise.countryTo.name}"/>(<c:out
-                                value="${order.cruise.countryTo.city}"/>)</p>
-                        <p class="card-text">departure : <c:out value="${order.cruise.departureFormat}"/></p>
-                        <p class="card-text">arrival : <c:out value="${order.cruise.arrivalFormat}"/></p>
-                        <p class="card-text">durability : <c:out value="${order.cruise.durability}"/></p>
-                        <p class="card-text">category : <c:out value="${order.cruise.category.name()}"/></p>
-                        <p class="card-text">bonus : <c:out value="${order.cruise.category.bonus}"/></p>
-                        <p class="card-text">capacity : <c:out value="${order.cruise.ship.capacity}"/></p>
-                        <p class="card-text">countPort :<c:out value="${order.cruise.countPort}"/></p>
-                        <p class="card-text">price :<c:out value="${order.cruise.price}"/></p>
-                            <%----------------------------- B E G I N ___ E X C U R S I O N -------------------------------------%>
+<c:import url="static/menu.jsp"/>
 
-                        <p class="card-text"> Excursion :
-                            <c:choose>
-                            <c:when test="${order.excursion != null}">
-                            <div class="row">
-                                    <div class="card" style="width: 18rem;">
-                                        <c:forEach var="image" items="${order.excursion.excursionImageList}">
-                                        <img class="card-img-top" src="<c:out value="${image.uri}"/>/100px180/"
-                                             alt="Card image cap">
-                                        </c:forEach>
-                                        <div class="card" style="width: 18rem;">
-                                            <h5 class="card-title"><c:out value="${order.excursion.name}"/></h5>
-                                            <div class="card-body">
-                        <p class="card-text">description : <c:out value="${order.excursion.description}"/></p>
-                        <p class="card-text">price : <c:out value="${order.excursion.price}"/></p>
-                        <p class="card-text">total price : <c:out value="${order.order.price_total}"/></p>
-                    </div>
-                </div>
-            </div>
 
-    </div>
-    </c:when>
-    <c:otherwise>
-        <p class="card-text"> None</p>
-    </c:otherwise>
-    </c:choose></p>
-        <%----------------------------- E N D ___  E X C U R S I O N -------------------------------------%>
-</div>
-</div>
-</div>
-</c:forEach>
-</div>
+<h1><u>My Info</u></h1>
+ <h1> Login : ${sessionScope.user.login}</h1>
+<h1> First Name : ${sessionScope.user.firstName}</h1>
+
+    <h1>Last Name :    ${sessionScope.user.lastName}</h1>
+
+
+        <h1> Email :    ${sessionScope.user.email}</h1>
+
+
+<hr>
+<div id="wrapper2">
+    <h1><u>My Orders List</u></h1>
+
+    <table id="keywords"  cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th><span>id</span></th>
+            <th><span>Cruise Name</span></th>
+            <th><span>Country From</span></th>
+            <th><span>Country TO</span></th>
+            <th><span>Departure</span></th>
+            <th><span>Arrival</span></th>
+            <th><span>Durability</span></th>
+            <th><span>Ship Name</span></th>
+            <th><span>Category</span></th>
+            <th><span>Ecursion Name</span></th>
+            <th><span>Total Price</span></th>
+        </tr>
+        </thead>
+        <c:forEach var="orders" items="${orderItemBeans}">
+            <tbody>
+            <tr>
+                <td class="lalign"><c:out value="${orders.order.order_id}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.name}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.countryFrom.name}"/>(<c:out
+                        value="${orders.cruise.countryFrom.city}"/>)</td>
+                <td class="lalign"><c:out value="${orders.cruise.countryTo.name}"/>(<c:out
+                        value="${orders.cruise.countryTo.city}"/>)</td>
+                <td class="lalign"><c:out value="${orders.cruise.departureFormat}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.arrivalFormat}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.durability}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.ship.name}"/></td>
+                <td class="lalign"><c:out value="${orders.cruise.category.name()}"/></td>
+                <c:choose>
+                    <c:when test="${orders.excursion.id == 0}">
+                        <td class="lalign">None</td>
+                    </c:when>
+                    <c:when test="${orders.excursion != null}">
+                        <td class="lalign"><c:out value="${orders.excursion.name}"/></td>
+                    </c:when>
+                    <c:otherwise>
+                        <td class="lalign">None</td>
+                    </c:otherwise>
+                </c:choose>
+                <td class="lalign"><c:out value="${orders.order.price_total}"/></td>
+            </tr>
+            </tbody>
+        </c:forEach>
+    </table>
 </div>
 </body>
 </html>

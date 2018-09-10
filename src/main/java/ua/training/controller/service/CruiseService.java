@@ -14,52 +14,22 @@ import java.util.List;
 
 public class CruiseService {
     private final static Logger logger = Logger.getLogger(CruiseService.class);
-    public static final int LIMIT_CRUISE=2;
+    public static final int LIMIT_CRUISE = 2;
     private CruiseDao cruiseDao;
     private AbstractFactory factoryDao;
 
-    public CruiseService(){
+    public CruiseService() {
         this.factoryDao = new FactoryDao();
-        this.cruiseDao=factoryDao.createCruiseDao();
+        this.cruiseDao = factoryDao.createCruiseDao();
     }
 
-/*    public boolean addNewCruise(HttpServletRequest request){
-        logger.info("add new cruise");
-        String name = request.getParameter("name");
-        int ship = Integer.parseInt(request.getParameter("ship"));
-        int cityFrom = Integer.parseInt(request.getParameter("cityFrom"));
-        int cityTo = Integer.parseInt(request.getParameter("cityTo"));
-        LocalDateTime departure = LocalDateTime.parse(request.getParameter("departure"));
-        LocalDateTime arrival = LocalDateTime.parse(request.getParameter("arrival"));
-        CruiseCategory category = CruiseCategory.valueOf(request.getParameter("category"));
-        int port = Integer.parseInt(request.getParameter("port"));
-        long price = Long.parseLong(request.getParameter("price"));
-        Cruise cruise = new Cruise();
-        cruise.setName(name);
-       // cruise.setShip_id(ship);
-       // cruise.setCityFrom(cityFrom);
-       // cruise.setCityTo(cityTo);
-        cruise.setDeparture(departure);
-        cruise.setArrival(arrival);
-        cruise.setCategory(category);
-        cruise.setCountPort(port);
-        cruise.setPrice(price);
-        boolean result = cruiseDao.create(cruise);
-        if (result) {
-            logger.info("Created cruise " + cruise.toString());
-        } else {
-            logger.error("Error");
-        }
-        return result;
-
-    }*/
-
-    public List showListCruise(){
+    public List showListCruise() {
         logger.info("show list cruise");
         List<Cruise> list = cruiseDao.findAll();
         return list;
     }
-    public List showListCruiseWithLimit(int page){
+
+    public List showListCruiseWithLimit(int page) {
         logger.info("show list cruise");
         List<Cruise> list = cruiseDao.findAllWithLimit(offset(page));
         return list;

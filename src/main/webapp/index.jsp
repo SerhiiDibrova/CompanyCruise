@@ -83,7 +83,7 @@
         </div>
 
         <div class="col-md-5">
-            <img class="featurette-image img-responsive" src="images/Star_Pride-fill-800x536.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive" src="${pageContext.request.contextPath}/images/Star_Pride-fill-800x536.jpg" alt="Generic placeholder image">
         </div>
     </div>
 
@@ -101,7 +101,7 @@
                 Le Commandant Charcot is scheduled to launch in 2021. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive" src="images/ponant.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive" src="${pageContext.request.contextPath}/images/ponant.jpg" alt="Generic placeholder image">
         </div>
     </div>
 
@@ -118,7 +118,7 @@
                 According to a spokesperson from Nordfjord Havn, the port’s slogan is “Raw Wilderness Made Accessible,” highlighted by the Norwegian fjord landscape, the Briksdal glacier, and one of the world’s steepest cable cars in the Loen Skylift. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive" src="images/Tender.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive" src="${pageContext.request.contextPath}/images/Tender.jpg" alt="Generic placeholder image">
         </div>
     </div>
 

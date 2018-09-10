@@ -4,10 +4,7 @@ import org.apache.log4j.Logger;
 import ua.training.controller.command.Command;
 import ua.training.controller.command.NoCommand;
 import ua.training.controller.command.WelcomePageCommand;
-import ua.training.controller.command.admin.CountryDeleteCommand;
-import ua.training.controller.command.admin.CountryEditCommand;
-import ua.training.controller.command.admin.CountryUpdateCommand;
-import ua.training.controller.command.admin.OrderAllCommand;
+import ua.training.controller.command.admin.*;
 import ua.training.controller.command.user.*;
 import ua.training.controller.util.Util;
 

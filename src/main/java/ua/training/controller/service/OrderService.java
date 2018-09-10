@@ -36,6 +36,7 @@ public class OrderService {
         this.orderDao = factoryDao.createOrderDao();
     }
 
+
     public String makeOrder(String userLogin, int cruiseId, int cartId, int excursionId) {
         List<CartItemBean> ordersList = findOrdersByUser(userLogin);
         if (ordersList != null) {
@@ -125,4 +126,5 @@ public class OrderService {
 
         return orderItemBeans;
     }
+
 }

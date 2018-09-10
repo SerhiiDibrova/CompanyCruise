@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import ua.training.dao.AbstractFactory;
 import ua.training.dao.ExcursionDao;
 import ua.training.dao.FactoryDao;
+import ua.training.dao.daoimpl.ExcursionDaoImpl;
 import ua.training.model.Excursion;
 
 import java.util.List;
@@ -18,8 +19,9 @@ public class ExcursionService {
         this.excursionDao=factoryDao.createExcursionDao();
     }
 
-    public List<Excursion> showListContry() {
-        logger.info("show list ship");
+
+    public List<Excursion> showListExcursion() {
+        logger.info("show list excursion");
         List<Excursion> list = excursionDao.findAll();
         return list;
     }

@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 9/1/2018
-  Time: 12:29 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="static/taglib.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <c:import url="static/head.jsp"/>
+    <title>Succes</title>
 </head>
 <body>
-<h1>${msg}</h1>
+<c:import url="static/menu.jsp"/>
+<h1 align="center" style="margin-top: 200px">${msg}</h1>
 </body>
 </html>

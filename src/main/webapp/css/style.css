@@ -46,3 +46,52 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.banner-area {
+    background: #f9f9ff;
+}
+.banner-area .fullscreen {
+    height: 750px !important;
+}
+.banner-left h6 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.navbar-form{
+    margin-top: 15px;
+}
+.imgExcursion{
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+.form-border{
+    background: #d9edf7;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+
+
+}
+
+.cartExcursion{
+    width: 750px;
+    margin-bottom: 21px;
+    padding: 10px;
+    border: solid 1px #000066;
+    min-height: 153px;
+    background-color: #f3f3f3;
+    height: 280px;
+
+    margin-left: 140px;
+}
+.cartExcursionText{
+    width: 450px;
+    float: right;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.cartTitleExcursion{
+    margin-right: 300px;
+}

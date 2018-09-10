@@ -7,55 +7,155 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0daac3c-ddc2-49e4-a883-707ae95a5085" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/Endpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/Endpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/CommandList/CommandList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/CommandList/CommandList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/AddCartCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/AddCartCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryAddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryAddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryAddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryAddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryShowListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryShowListCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CruiseListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CruiseListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/SignUpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ExcursionListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ExcursionListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ShipListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ShipListCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/filter/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/filter/Authorization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/listener/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/listener/SessionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/Bean/OrderItemBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/Bean/OrderItemBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CountryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CountryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionImageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionImageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/OrderDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipImageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipImageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/model/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/model/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/endpoint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/endpoint.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/Tender.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/beach front.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/carnival.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/entrance.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/hotel view.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/pool.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/relaxedspa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/restaurant.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/spa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/swan.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/cardlist.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/country.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/country.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/countrylist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/countrylist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/cruiselist.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/shiplist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/shiplist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/endpoint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/endpoint.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/Endpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/Endpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error/error403.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error/error403.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderall.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderall.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/static/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/static/head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/static/table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/static/table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/succes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/succes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/endpoint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/endpoint.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/Endpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/Endpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/CommandList/CommandList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/CommandList/CommandList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/CountryAddCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/CountryAddCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/CountryShowListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/CountryShowListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/SignInCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/SignInCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/command/user/SignUpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/filter/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/filter/Authorization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/filter/FilterAuthorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/filter/FilterAuthorization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/service/CountryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/service/CountryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/servlet/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/servlet/Servlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/controller/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/AbstractFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/AbstractFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/CardDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/CruiseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/CruiseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/ExcursionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/ExcursionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/FactoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/FactoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/daoimpl/CountryDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/daoimpl/CountryDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/daoimpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/daoimpl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/CardQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/CruiseQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/CruiseQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/ExcursionQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/ExcursionQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/ShipQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/ShipQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/UserQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/dao/query/UserQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Cruise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Cruise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Excursion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Excursion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/User$Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/User$Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/classes/ua/training/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/jsp/country.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/jsp/country.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/jsp/countrylist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/jsp/countrylist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CompanyCruise/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/CompanyCruise/jsp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/CommandList/CommandList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/command/CommandList/CommandList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/CountryAddCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/CountryAddCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/SignUpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/CountryAddCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/CountryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/command/user/CountryShowListCommand.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/filter/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/filter/Authorization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/controller/service/CountryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/controller/service/CountryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/dao/daoimpl/CountryDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/dao/daoimpl/CountryDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/model/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/model/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/training/model/Cruise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/training/model/Cruise.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-08-31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-08" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-09-08" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/cardlist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/country_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/country_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/countrylist_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/countrylist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/cruiselist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/error/error403_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/error/error404_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/error/error_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/excursionlist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/login_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/login_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/register_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/shiplist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/cruise/org/apache/jsp/jsp/succes_jsp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/about_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/about_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cardlist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cart_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cart_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/contact_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/contact_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/country_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/country_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/countrylist_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/countrylist_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cruiselist_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cruiselist_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cruise_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cruise_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/cruiselist_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error403_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error403_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error404_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error404_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/error/error_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/login_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/orderall_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/orderall_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/profile_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/profile_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/register_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/register_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/shiplist_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/shiplist_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/head_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/head_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/menu_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/menu_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/table_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/static_/table_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/jsp/succes_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/static_/head_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/wilddolphin/org/apache/jsp/static_/menu_jsp.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,89 +185,30 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="cruise.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="40" column="89" lean-forward="true" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="cart.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="181" column="53" lean-forward="true" selection-start-line="180" selection-start-column="8" selection-end-line="181" selection-end-column="53" />
+            <state relative-caret-position="80">
+              <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderall.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/orderall.jsp">
+      <file leaf-file-name="cruizeStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="80">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/table.css">
+      <file leaf-file-name="succes.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/succes.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
-              <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="countrylist.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/countrylist.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="45" column="10" lean-forward="true" selection-start-line="14" selection-end-line="45" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/Endpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderAllCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/OrderAllCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ProfileCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/CommandList/CommandList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="160">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -182,6 +223,7 @@
         <option value="jsf" />
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -191,6 +233,11 @@
       <find>fav</find>
       <find>cruise_id</find>
       <find>lala</find>
+      <find>lal</find>
+      <find>la</find>
+      <find>cuna</find>
+      <find>rgb</find>
+      <find>lab</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,34 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/mapper/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/cruiselist.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/listener/SessionListener.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/head.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/taglib.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/menu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/SignUpCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/AboutUsCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ContactCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/taglib.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/about.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/contact.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/table.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryEditDeleteCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryAddCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/shiplist.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryEditCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/model/Country.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryUpdateCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/country.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryDeleteCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CountryDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionDaoImpl.java" />
@@ -235,21 +254,49 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipImageDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/countrylist.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/AddCartCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CruiseListCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/endpoint.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/Endpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/filter/Authorization.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/CommandList/CommandList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/OrderAllCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/Bean/OrderItemBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/table.css" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/filter/Authorization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CruiseListCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/error/error403.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/orderall.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/contact.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ProfileCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/table.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/about.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ExcursionListCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/ExcursionServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/model/CruiseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/model/ShipTest.java" />
+        <option value="$PROJECT_DIR$/src/test/CheckPathTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/CountryServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ShipListCommand.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/ShipServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/CruiseServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/OrderServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ua/training/controller/service/CartServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/succes.jsp" />
       </list>
     </option>
   </component>
@@ -297,7 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -322,97 +368,7 @@
               <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="CommandList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
@@ -420,6 +376,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
@@ -434,12 +391,15 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="F:/Developer/IdeaProjects/Hello" />
@@ -452,23 +412,30 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ua.training.controller.command.admin" />
-      <recent name="ua.training.controller.command.user" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ua.training.controller.service" />
       <recent name="ua.training.model" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\CompanyCruise\src\main\resources" />
-      <recent name="F:\CompanyCruise\src\main\webapp\images" />
-      <recent name="F:\CompanyCruise\src\main\webapp\css" />
-      <recent name="F:\CompanyCruise\src\main\webapp" />
-      <recent name="F:\CompanyCruise\src\main\webapp\jsp\error" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ua.training.controller.command.admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\CompanyCruise\src\main\webapp\jsp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\CompanyCruise\src\main\webapp\jsp" />
+      <recent name="F:\CompanyCruise\src\main\webapp\images" />
+      <recent name="F:\CompanyCruise\src\main\resources" />
+      <recent name="F:\CompanyCruise\src\main\webapp\css" />
+      <recent name="F:\CompanyCruise\src\main\webapp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ua.training.controller.command.admin" />
+      <recent name="ua.training.controller.command.user" />
+      <recent name="ua.training.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -486,6 +453,121 @@
   <component name="RunManager" selected="Maven.Unnamed">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="CartServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyCruise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.training.controller.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.training.controller.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.training.controller.service.CartServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CruiseServiceTest.testFindAllExcursions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyCruise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.training.controller.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.training.controller.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.training.controller.service.CruiseServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllExcursions" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyCruise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.training.controller.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.training.controller.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.training.controller.service.OrderServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ShipServiceTest.testFindAllCountries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyCruise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.training.controller.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.training.controller.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.training.controller.service.ShipServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllCountries" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ShipServiceTest.testFindAllShips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyCruise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.training.controller.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.training.controller.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.training.controller.service.ShipServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllShips" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -625,7 +707,21 @@
     <list>
       <item itemvalue="Maven.Unnamed" />
       <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="JUnit.ShipServiceTest.testFindAllCountries" />
+      <item itemvalue="JUnit.ShipServiceTest.testFindAllShips" />
+      <item itemvalue="JUnit.CruiseServiceTest.testFindAllExcursions" />
+      <item itemvalue="JUnit.CartServiceTest" />
+      <item itemvalue="JUnit.OrderServiceTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CartServiceTest" />
+        <item itemvalue="JUnit.OrderServiceTest" />
+        <item itemvalue="JUnit.CruiseServiceTest.testFindAllExcursions" />
+        <item itemvalue="JUnit.ShipServiceTest.testFindAllShips" />
+        <item itemvalue="JUnit.ShipServiceTest.testFindAllCountries" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -672,12 +768,47 @@
       <workItem from="1536219335828" duration="3489000" />
       <workItem from="1536306194396" duration="4302000" />
       <workItem from="1536319994655" duration="23669000" />
-      <workItem from="1536395866006" duration="17401000" />
+      <workItem from="1536395866006" duration="20725000" />
+      <workItem from="1536430218715" duration="9827000" />
+      <workItem from="1536445360466" duration="1555000" />
+      <workItem from="1536501286819" duration="26335000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 40m 30s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderServiceTest - 2018.09.10 at 00h 40m 45s.xml">
+      <configuration name="OrderServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderServiceTest - 2018.09.10 at 00h 41m 03s.xml">
+      <configuration name="OrderServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderServiceTest - 2018.09.10 at 00h 41m 15s.xml">
+      <configuration name="OrderServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 42m 30s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 42m 48s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 44m 40s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 45m 17s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 45m 49s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartServiceTest - 2018.09.10 at 00h 46m 48s.xml">
+      <configuration name="CartServiceTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364432000" />
+    <option name="totallyTimeSpent" value="405473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,7 +824,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.04901961" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.21860817" side_tool="true" visible="true" weight="0.374183" />
       <window_info anchor="bottom" id="Application Servers" order="12" sideWeight="0.49924356" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
@@ -705,19 +836,19 @@
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.18464053" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4924357" weight="0.40522876" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.61119515" visible="true" weight="0.28921568" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78139186" visible="true" weight="0.374183" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.3267974" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37065053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36686838" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969743" weight="0.36437908" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4969743" weight="0.18137255" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.32838285" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49848714" weight="0.3267974" />
@@ -732,393 +863,386 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/jsp/about.jsp</url>
+          <line>38</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/static/table.jsp">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        <state relative-caret-position="-405">
+          <caret line="347" column="16" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryEditDeleteCommand.java">
+    <entry file="file://$PROJECT_DIR$/logs/cruise.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/error.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-3540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryShowListCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/shiplist.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="80">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryAddCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryEditCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryUpdateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/CountryDeleteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/query/CountryQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/CountryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CountryDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="114" column="47" lean-forward="true" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CartDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1588">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/CruiseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2500">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ExcursionImageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/OrderDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="98" column="64" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="128" column="64" selection-start-line="128" selection-start-column="64" selection-end-line="128" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/ShipImageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="113" column="64" selection-start-line="113" selection-start-column="64" selection-end-line="113" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="121" column="44" lean-forward="true" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="44" column="85" selection-start-line="44" selection-start-column="85" selection-end-line="44" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/AddCartCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryAddCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ExcursionListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/PayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ShipListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ShowCartCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CountryShowListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/CruiseListCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="34" column="80" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/endpoint.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/filter/Authorization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="59" column="74" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/Endpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/CommandList/CommandList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/user/ProfileCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/country.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="220">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/countrylist.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="45" column="10" lean-forward="true" selection-start-line="14" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/Bean/OrderItemBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
-          <folding>
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="119" column="58" selection-start-line="119" selection-start-column="58" selection-end-line="119" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/OrderAllCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="181" column="53" lean-forward="true" selection-start-line="180" selection-start-column="8" selection-end-line="181" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/table.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="40" column="89" lean-forward="true" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="89" />
+        <state relative-caret-position="200">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/orderall.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="140">
+          <caret line="67" column="6" lean-forward="true" selection-start-line="16" selection-end-line="67" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/table.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="120" column="96" selection-start-line="120" selection-start-column="62" selection-end-line="120" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ExcursionListCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/dao/daoimpl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="80" column="32" lean-forward="true" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cruise.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1300">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Excursion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/Bean/OrderItemBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/model/ShipTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/model/CruiseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/CheckPathTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1120">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/util/SessionUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/util/HashCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/CountryServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/command/admin/ShipListCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/ShipServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-820">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/CruiseServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="35" column="65" lean-forward="true" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/CartServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="1" selection-end-line="41" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/OrderServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ua/training/controller/service/ExcursionServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/magnifying-glass.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/excursion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/cruizeStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/succes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>

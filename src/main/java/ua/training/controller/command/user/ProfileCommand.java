@@ -26,8 +26,6 @@ public class ProfileCommand implements Command {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         List<OrderItemBean> orderItemBeans =  orderService.showListOrderByUser(user);
-       // System.out.println("aaaaaaaaaaaaaa--->"+orders.toString());
-     //   System.out.println("aaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbb--->"+orders.get(0).getCruise().toString());
         session.setAttribute("orderItemBeans",orderItemBeans);
         return new Forward(Endpoint.getInstance().getProperty(Endpoint.PROFILE_FORM));
     }

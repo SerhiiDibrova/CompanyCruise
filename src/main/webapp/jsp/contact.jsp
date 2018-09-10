@@ -63,7 +63,7 @@
                     <div class="card-body text-center">
                         <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
                         <h4 class="text-uppercase mb-5">email</h4>
-                        <p>http://dibrova.sergiy@gmail.com</p>
+                        <p>dibrova.sergiy@gmail.com</p>
                     </div>
                 </div>
             </div>

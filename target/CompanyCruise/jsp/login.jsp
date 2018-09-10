@@ -1,28 +1,41 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 8/20/2018
-  Time: 11:50 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@include file="static/taglib.jsp" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Login</title>
+    <c:import url="static/head.jsp"/>
 </head>
 <body>
-Login
-<p align="center"><label class="colortext"> ${message} </label></p>
-<form action="signin">
+<c:import url="static/menu.jsp"/>
+<div class="wrapper">
+    <c:if test="${message!= null}">
+        <h2><p align="center"><label style="color:red" class="colortext"> ${message} </label></p></h2>
+    </c:if>
+    <div class="container">
 
-    Please enter your username
-    <input type="text" name="email"/><br>
-
-    Please enter your password
-    <input type="text" name="password"/>
-
-    <input type="submit" value="submit">
-
-</form>
+        <form class="form-signin" action="signin">
+            <div class="form-group">
+                <h2 align="center">Sign In</h2>
+            </div>
+            <div class="form-group">
+                <input required name="email" type="email" class="form-control"
+                       minlength="3" maxlength="75"
+                       placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="password" required name="password" class="form-control"
+                       minlength="4" maxlength="16" pattern="[A-Za-z0-9]{4,16}"
+                       placeholder="password">
+            </div>
+            <div class="form-group" align="center">
+                <button class="btn btn-success btn-lg">Sign In</button>
+                <a href="${pageContext.request.contextPath}/registration" class="btn btn-warning btn-lg"
+                   role="button">Create
+                    Account
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

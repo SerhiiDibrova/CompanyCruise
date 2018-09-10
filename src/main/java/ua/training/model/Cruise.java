@@ -138,11 +138,11 @@ public class Cruise implements Serializable {
         this.shipById = shipById;
     }
     public String getDepartureFormat() {
-        return this.getDeparture().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        return this.getDeparture().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
     }
 
     public String getArrivalFormat() {
-        return this.getArrival().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        return this.getArrival().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
     }
 
     public LocalDateTime convertToLocalDateTime(Timestamp timestap) {

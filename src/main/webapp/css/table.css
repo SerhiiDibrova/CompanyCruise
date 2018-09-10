@@ -72,19 +72,28 @@ h1 {
     -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
 }
 #wrapper2 {
-    /*display: block;*/
+   /* display: block;*/
     width: auto;
     background: #fff;
     margin: 0 auto;
     padding: 10px 17px;
     -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+    overflow-x:auto;
+}
+#wrapper5 {
+    display: block;
+    width: 450px;
+    background: #e3e3e3;
+    margin: 0 auto;
+    padding: 10px 17px;
+    -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+
 }
 #keywords {
     margin: 0 auto;
     font-size: 1.2em;
     margin-bottom: 15px;
 }
-
 
 #keywords thead {
     cursor: pointer;

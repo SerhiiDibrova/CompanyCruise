@@ -20,7 +20,7 @@ public class ShipService {
         this.shipDao = factoryDao.createShipDao();
     }
 
-    public List<Ship> showListContry() {
+    public List<Ship> showListShips() {
         logger.info("show list ship");
         List<Ship> list = shipDao.findAll();
         return list;

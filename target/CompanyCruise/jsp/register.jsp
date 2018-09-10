@@ -1,43 +1,61 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 8/20/2018
-  Time: 11:50 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@include file="static/taglib.jsp" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Registration</title>
+    <c:import url="static/head.jsp"/>
 </head>
 <body>
+<c:import url="static/menu.jsp"/>
+<div class="wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+    <form class="form-signin" action="signup" method="post">
+        <p align="center"><label style="color:red" class="colortext"> ${messageRegister} </label></p>
+        <div class="form-group">
+        <h2 align="center">Sign Up</h2>
+        </div>
+        <div class="form-group">
+            <input placeholder="login"
+                   minlength="3" maxlength="25" required
+                   pattern="^[A-Za-z0-9_]{3,75}$"
+                   class="form-control" title="login" name="login">
+        </div>
+        <div class="form-group">
+            <input placeholder="password"
+                   minlength="4" maxlength="16" type="password" name="password"
+                   pattern="[A-Za-z0-9]{4,16}"
+                   title="password"
+                   required class="form-control">
+        </div>
+        <div class="form-group">
+            <input placeholder="First Name"
+                   minlength="3" maxlength="25" required
+                   pattern="^[A-Za-z0-9_]{3,75}$"
+                   class="form-control" title="" name="firstName">
+        </div>
+        <div class="form-group">
+            <input placeholder="Last Name"
+                   minlength="3" maxlength="25" required
+                   pattern="^[A-Za-z0-9_]{3,75}$"
+                   class="form-control" title="" name="lastName">
+        </div>
 
-<form action="signup" method="post">
-    <p align="center"><label class="colortext"> ${messageRegister} </label></p>
-    <table style="with: 50%">
-        <tr>
-            <td>Login</td>
-            <td><input type="text" name="login" /></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" /></td>
-        </tr>
-        <tr>
-            <td>First Name</td>
-            <td><input type="text" name="firstName" /></td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td><input type="text" name="lastName" /></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="text" name="email" /></td>
-        </tr>
+        <div class="form-group">
+            <input type="email" placeholder="email"
+                   minlength="5" maxlength="100" required
+                   class="form-control" name="email">
+        </div>
+        <div class="form-group" align="center">
+            <button class="btn btn-success btn-lg">Sign In</button>
+        <a href="${pageContext.request.contextPath}/" class="btn btn-warning btn-lg" role="button">Cancel</a>
 
-      </table>
-    <input type="submit" value="Submit" /></form>
-
+        </div>
+    </form>
+</div>
+    </div>
+</div>
+</div>
 </body>
 </html>
