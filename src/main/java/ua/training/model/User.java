@@ -21,7 +21,6 @@ public class User implements Serializable {
     private Role role;
     private LocalDateTime created;
 
-    /*private List<Cruise> cruise;*/
 
     public User() {    }
     public User(int id){this.id=id;}

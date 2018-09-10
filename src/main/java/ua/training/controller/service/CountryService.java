@@ -18,6 +18,11 @@ public class CountryService {
         countryDao=factoryDao.createCountryDao();
     }
 
+    /**
+     * add new Country in DB
+     * @param request
+     * @return
+     */
     public boolean addNewCountry(HttpServletRequest request){
         logger.info("registration ");
         String name = request.getParameter("name");
@@ -33,17 +38,30 @@ public class CountryService {
 
     }
 
+    /**
+     * show all countries
+     * @return list of countries
+     */
     public List showListContry(){
         logger.info("show list country");
         List<Country> list = countryDao.findAll();
          return list;
     }
 
+    /**
+     * find by id Country
+     * @param id
+     * @return
+     */
     public Country findById(int id){
         Country country = countryDao.findById(id);
         return country;
     }
 
+    /**
+     * Edit country by id
+     * @param request
+     */
     public void updateCountry(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
@@ -53,6 +71,10 @@ public class CountryService {
         logger.info("Updated : "+country.toString());
     }
 
+    /**
+     * delete Country by id
+     * @param request
+     */
     public void deleteById(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("id"));
         countryDao.delete(id);

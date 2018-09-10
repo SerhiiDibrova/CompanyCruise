@@ -36,7 +36,6 @@ public class OrderService {
         this.orderDao = factoryDao.createOrderDao();
     }
 
-
     public String makeOrder(String userLogin, int cruiseId, int cartId, int excursionId) {
         List<CartItemBean> ordersList = findOrdersByUser(userLogin);
         if (ordersList != null) {
@@ -85,7 +84,9 @@ public class OrderService {
         }
         return cartItemBeans;
     }
-
+    /**
+     * Show all orders of user
+     */
     public List<OrderItemBean> showListOrderByUser(User user){
         logger.info("show list order by Login" + user.getLogin());
         List<Order> orderList = orderDao.findUserById(user.getId());
@@ -106,6 +107,10 @@ public class OrderService {
         return orderItemBeans;
     }
 
+    /**
+     * show all orders from DB
+     * @return List<OrderItemBean>
+     */
     public List<OrderItemBean> findAllOrders(){
         logger.info("Find all order from DB" );
         List<Order> orderList = orderDao.findAll();

@@ -12,7 +12,10 @@ public class Excursion implements Serializable {
     private String description;
     private long price;
     private List<ExcursionImage> excursionImageList = new ArrayList<>();
-    public Excursion(){}
+
+    public Excursion() {
+    }
+
     public Excursion(int country, String name, String description, long price) {
         this.country = country;
         this.name = name;
@@ -67,6 +70,7 @@ public class Excursion implements Serializable {
     public void setExcursionImageList(List<ExcursionImage> excursionImageList) {
         this.excursionImageList = excursionImageList;
     }
+
     @Override
     public int hashCode() {
         return 31 * id;

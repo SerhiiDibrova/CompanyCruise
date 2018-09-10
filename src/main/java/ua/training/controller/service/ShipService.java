@@ -20,6 +20,10 @@ public class ShipService {
         this.shipDao = factoryDao.createShipDao();
     }
 
+    /**
+     * show all ships fron DB
+     * @return list of ships
+     */
     public List<Ship> showListShips() {
         logger.info("show list ship");
         List<Ship> list = shipDao.findAll();

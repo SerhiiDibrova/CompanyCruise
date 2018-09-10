@@ -19,13 +19,21 @@ public class ExcursionService {
         this.excursionDao=factoryDao.createExcursionDao();
     }
 
-
+    /**
+     * Show all excursion from DB
+     * @return list of Excursions
+     */
     public List<Excursion> showListExcursion() {
         logger.info("show list excursion");
         List<Excursion> list = excursionDao.findAll();
         return list;
     }
 
+    /**
+     * get Excursion by id from DB
+     * @param id
+     * @return
+     */
     public Excursion getExcursionById(int id){
         logger.info("Get Excursion : "+id);
         return excursionDao.findById(id);

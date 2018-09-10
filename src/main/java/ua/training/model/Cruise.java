@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 
 public class Cruise implements Serializable {
     private final static long serialVersionUID = 1L;
@@ -86,6 +87,9 @@ public class Cruise implements Serializable {
     public void setArrival(LocalDateTime arrival) {
         this.arrival = arrival;
     }
+    /**
+     * @see Util#calculateDuration(LocalDateTime, LocalDateTime)
+     */
     public String getDurability() {
         return Util.calculateDuration(departure,arrival);
     }
@@ -137,14 +141,27 @@ public class Cruise implements Serializable {
     public void setShipById(int shipById) {
         this.shipById = shipById;
     }
+
+    /**
+     * @see DateTimeFormatter#format(TemporalAccessor)
+     * @return format "dd-MM-yyyy HH:mm"
+     */
     public String getDepartureFormat() {
         return this.getDeparture().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
     }
-
+    /**
+     * @see DateTimeFormatter#format(TemporalAccessor)
+     * @return format "dd-MM-yyyy HH:mm"
+     */
     public String getArrivalFormat() {
         return this.getArrival().format( DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
     }
 
+    /**
+     *  Convert from timestap to LocalDAteTime
+     * @param timestap
+     * @return localDateStap
+     */
     public LocalDateTime convertToLocalDateTime(Timestamp timestap) {
         if (timestap != null) {
             return timestap.toLocalDateTime();
@@ -152,6 +169,11 @@ public class Cruise implements Serializable {
         return null;
     }
 
+    /**
+     * Convert from localDateTime To Timestamp
+     * @param localDateTime
+     * @return timestap
+     */
     public Timestamp convertToTimestap(LocalDateTime localDateTime) {
         return Timestamp.valueOf(localDateTime);
     }

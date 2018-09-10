@@ -18,7 +18,9 @@ import java.util.HashSet;
 public class Servlet extends HttpServlet {
     private final static Logger logger = Logger.getLogger(Servlet.class);
     private CommandList commandList = CommandList.getInstance();
-
+    /**
+     * @see HttpServlet#init(ServletConfig)
+     */
     public void init(ServletConfig servletConfig) throws ServletException {
         super.init(servletConfig);
        servletConfig.getServletContext()
@@ -26,6 +28,9 @@ public class Servlet extends HttpServlet {
 
     }
 
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -33,7 +38,9 @@ public class Servlet extends HttpServlet {
       logger.info(getServletName() + " get request");
         processRequest(req, resp);
     }
-
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -41,6 +48,7 @@ public class Servlet extends HttpServlet {
         logger.info(getServletName() + " post request");
         processRequest(req, resp);
     }
+
     private void processRequest(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         try {
