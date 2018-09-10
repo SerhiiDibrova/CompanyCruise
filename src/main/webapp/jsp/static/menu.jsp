@@ -21,20 +21,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ><a href="${pageContext.request.contextPath}/main">Main<span
+                <li ><a href="${pageContext.request.contextPath}/main"><fmt:message key="menu.main"/><span
                         class="sr-only">(current)</span></a></li>
-                <li><a href="${pageContext.request.contextPath}/cruise"> Cruise </a></li>
+                <li><a href="${pageContext.request.contextPath}/cruise"><fmt:message key="menu.cruise"/></a></li>
 
-                <li><a href="${pageContext.request.contextPath}/aboutus">About us</a></li>
+                <li><a href="${pageContext.request.contextPath}/aboutus"><fmt:message key="menu.about.us"/></a></li>
                 <c:if test="${sessionScope.role == 'ADMIN' }">
                      <li class="dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin<span
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><fmt:message key="menu.admin"/><span
                                  class="caret"></span></a>
                          <ul class="dropdown-menu" role="menu">
-                             <li><a href="${pageContext.request.contextPath}/country">Country</a></li>
-                             <li><a href="${pageContext.request.contextPath}/ship">Ship</a></li>
-                             <li><a href="${pageContext.request.contextPath}/cruise">Cruise</a></li>
-                             <li><a href="${pageContext.request.contextPath}/orderall">Order All</a></li>
+                             <li><a href="${pageContext.request.contextPath}/country"><fmt:message key="menu.country"/></a></li>
+                             <li><a href="${pageContext.request.contextPath}/ship"><fmt:message key="menu.ship"/></a></li>
+                             <li><a href="${pageContext.request.contextPath}/cruise"><fmt:message key="menu.cruises"/></a></li>
+                             <li><a href="${pageContext.request.contextPath}/orderall"><fmt:message key="menu.orders"/></a></li>
                              <li class="divider"></li>
                          </ul>
                      </li>
@@ -46,20 +46,20 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li><a href="${pageContext.request.contextPath}/contact">
-                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> CONTACT US</a></li>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <fmt:message key="menu.contact.us"/></a></li>
                 <c:choose>
                     <c:when test="${sessionScope.user == null}">
-                        <li><a href="${pageContext.request.contextPath}/login"> Login </a></li>
-                        <li><a href="${pageContext.request.contextPath}/registration"> Registration </a></li>
+                        <li><a href="${pageContext.request.contextPath}/login"> <fmt:message key="menu.login"/></a></li>
+                        <li><a href="${pageContext.request.contextPath}/registration"> <fmt:message key="menu.registr"/> </a></li>
                     </c:when>
                     <c:otherwise>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false">Account<span
+                               aria-expanded="false">${sessionScope.userName}<span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="${pageContext.request.contextPath}/profile">My Profile</a></li>
-                                <li><a href="${pageContext.request.contextPath}/logout">Log out</a></li>
+                                <li><a href="${pageContext.request.contextPath}/profile"><fmt:message key="menu.profile"/></a></li>
+                                <li><a href="${pageContext.request.contextPath}/logout"><fmt:message key="menu.logout"/></a></li>
                                 <li class="divider"></li>
 
                             </ul>

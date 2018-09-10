@@ -2,7 +2,7 @@
 <%@include file="static/taglib.jsp" %>
 <html>
 <head>
-    <title>Order All </title>
+    <title><fmt:message key="order.list"/> </title>
     <c:import url="static/head.jsp"/>
     <c:import url="static/table.jsp"/>
     <script type="text/javascript">
@@ -15,23 +15,23 @@
 <body>
 <c:import url="static/menu.jsp"/>
 <div id="wrapper2">
-    <h1>Orders List</h1>
+    <h1><fmt:message key="order.list"/></h1>
 
     <table id="keywords" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
-            <th><span>id</span></th>
-            <th><span>User Login</span></th>
-            <th><span>Cruise Name</span></th>
-            <th><span>Country From</span></th>
-            <th><span>Country TO</span></th>
-            <th><span>Departure</span></th>
-            <th><span>Arrival</span></th>
-            <th><span>Durability</span></th>
-            <th><span>Ship Name</span></th>
-            <th><span>Category</span></th>
-            <th><span>Ecursion Name</span></th>
-            <th><span>Total Price</span></th>
+            <th><span>№</span></th>
+            <th><span><fmt:message key="order.customer"/></span></th>
+            <th><span><fmt:message key="cruise.name"/></span></th>
+            <th><span><fmt:message key="cruise.from"/></span></th>
+            <th><span><fmt:message key="cruise.to"/></span></th>
+            <th><span><fmt:message key="cruise.departure"/></span></th>
+            <th><span><fmt:message key="cruise.arrival"/></span></th>
+            <th><span><fmt:message key="cruise.durability"/></span></th>
+            <th><span><fmt:message key="ship.name"/></span></th>
+            <th><span><fmt:message key="cruise.category"/></span></th>
+            <th><span><fmt:message key="excursion.name"/></span></th>
+            <th><span><fmt:message key="order.total.price"/></span></th>
         </tr>
         </thead>
         <c:forEach var="orders" items="${ordersList}">
@@ -51,13 +51,13 @@
                 <td class="lalign"><c:out value="${orders.cruise.category.name()}"/></td>
                 <c:choose>
                     <c:when test="${orders.excursion.id == 0}">
-                        <td class="lalign">None</td>
+                        <td class="lalign"><fmt:message key="none"/></td>
                     </c:when>
                 <c:when test="${orders.excursion != null}">
                     <td class="lalign"><c:out value="${orders.excursion.name}"/></td>
                 </c:when>
                 <c:otherwise>
-                    <td class="lalign">None</td>
+                    <td class="lalign"><fmt:message key="none"/></td>
                 </c:otherwise>
                 </c:choose>
                 <td class="lalign"><c:out value="${orders.order.price_total}"/></td>

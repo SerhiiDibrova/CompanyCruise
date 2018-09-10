@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Profile</title>
+    <title> <fmt:message key="profile"/></title>
     <c:import url="static/head.jsp"/>
     <c:import url="static/table.jsp"/>
 </head>
@@ -13,34 +13,34 @@
 <c:import url="static/menu.jsp"/>
 
 
-<h1><u>My Info</u></h1>
- <h1> Login : ${sessionScope.user.login}</h1>
-<h1> First Name : ${sessionScope.user.firstName}</h1>
+<h1><u><fmt:message key="profile.info"/></u></h1>
+ <h1> <fmt:message key="registr.login"/> : ${sessionScope.user.login}</h1>
+<h1> <fmt:message key="profile.first.name"/> : ${sessionScope.user.firstName}</h1>
 
-    <h1>Last Name :    ${sessionScope.user.lastName}</h1>
+    <h1><fmt:message key="profile.last.name"/> :    ${sessionScope.user.lastName}</h1>
 
 
-        <h1> Email :    ${sessionScope.user.email}</h1>
+        <h1> <fmt:message key="profile.email"/> :    ${sessionScope.user.email}</h1>
 
 
 <hr>
 <div id="wrapper2">
-    <h1><u>My Orders List</u></h1>
+    <h1><u><fmt:message key="profile.order"/></u></h1>
 
     <table id="keywords"  cellspacing="0" cellpadding="0">
         <thead>
         <tr>
-            <th><span>id</span></th>
-            <th><span>Cruise Name</span></th>
-            <th><span>Country From</span></th>
-            <th><span>Country TO</span></th>
-            <th><span>Departure</span></th>
-            <th><span>Arrival</span></th>
-            <th><span>Durability</span></th>
-            <th><span>Ship Name</span></th>
-            <th><span>Category</span></th>
-            <th><span>Ecursion Name</span></th>
-            <th><span>Total Price</span></th>
+            <th><span> № </span></th>
+            <th><span><fmt:message key="cruise.name"/></span></th>
+            <th><span><fmt:message key="cruise.from"/></span></th>
+            <th><span><fmt:message key="cruise.to"/></span></th>
+            <th><span><fmt:message key="cruise.departure"/></span></th>
+            <th><span><fmt:message key="cruise.arrival"/></span></th>
+            <th><span><fmt:message key="cruise.durability"/></span></th>
+            <th><span><fmt:message key="ship.name"/></span></th>
+            <th><span><fmt:message key="cruise.category"/></span></th>
+            <th><span><fmt:message key="excursion.name"/></span></th>
+            <th><span><fmt:message key="order.total.price"/></span></th>
         </tr>
         </thead>
         <c:forEach var="orders" items="${orderItemBeans}">
@@ -59,13 +59,13 @@
                 <td class="lalign"><c:out value="${orders.cruise.category.name()}"/></td>
                 <c:choose>
                     <c:when test="${orders.excursion.id == 0}">
-                        <td class="lalign">None</td>
+                        <td class="lalign"><fmt:message key="none"/></td>
                     </c:when>
                     <c:when test="${orders.excursion != null}">
                         <td class="lalign"><c:out value="${orders.excursion.name}"/></td>
                     </c:when>
                     <c:otherwise>
-                        <td class="lalign">None</td>
+                        <td class="lalign"><fmt:message key="none"/></td>
                     </c:otherwise>
                 </c:choose>
                 <td class="lalign"><c:out value="${orders.order.price_total}"/></td>

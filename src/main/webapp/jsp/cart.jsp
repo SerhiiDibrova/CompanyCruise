@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <c:import url="static/head.jsp"/>
     <link rel="stylesheet" href="css/cruizeStyle.css">
-    <title>Cart List</title>
+    <title><fmt:message key="cart.list"/></title>
 
 </head>
 <body>
 <c:import url="static/menu.jsp"/>
 <c:forEach var="item" items="${items}">
     <form action="pay" class="form-border">
+        <hr>
+
         <input type="hidden" name="cart_id" value=${item.cart.cart_id}>
         <input type="hidden" name="cruise_id" value=${item.cruise.id}>
         <section id="crCruiseListings">
@@ -36,35 +38,35 @@
 
                         <h3 class="crLengthDestination"><c:out value="${item.cruise.durability}"/>
                             <span class="CruiseTitleDays">★</span><c:out value="${item.cruise.ship.name}"/></h3>
-                        <div class="crVendorCruise">Cruise• <span><c:out value="${item.cruise.name}"/></span>
+                        <div class="crVendorCruise"><fmt:message key="cruise"/> • <span><c:out value="${item.cruise.name}"/></span>
                         </div>
-                        <div class="crPortList">from : <c:out value="${item.cruise.countryFrom.name}"/>(<c:out
+                        <div class="crPortList"><fmt:message key="cruise.from"/> : <c:out value="${item.cruise.countryFrom.name}"/>(<c:out
                                 value="${item.cruise.countryFrom.city}"/>)
                         </div>
-                        <div class="crPortList">to : <c:out value="${item.cruise.countryTo.name}"/>(<c:out
+                        <div class="crPortList"><fmt:message key="cruise.to"/> : <c:out value="${item.cruise.countryTo.name}"/>(<c:out
                                 value="${item.cruise.countryTo.city}"/>)
                         </div>
                         <div class="crSailingDates">
-                            departure date:
+                            <fmt:message key="cruise.departure"/>:
                             <c:out value="${item.cruise.departureFormat}"/></div>
                         <div class="crSailingDates">
-                            arrival date:
+                            <fmt:message key="cruise.arrival"/>:
                             <c:out value="${item.cruise.arrivalFormat}"/></div>
                         <div class="crCategory">
-                            Category:
+                            <fmt:message key="cruise.category"/> :
                             <c:out value="${item.cruise.category.name()}"/>
-                            Bonus:
+                            <fmt:message key="cruise.bonuse"/>:
                             <c:out value="${item.cruise.category.bonus}"/>
                         </div>
                         <div class="crCapacityAndPort">
-                            Capacity:
+                            <fmt:message key="ship.capacity"/> :
                             <c:out value="${item.cruise.ship.capacity}"/>
-                            port:
+                            <fmt:message key="cruise.port"/> :
                             <c:out value="${item.cruise.countPort}"/>
                         </div>
                         <div class="crPrices">
                             <div class="label">
-                                <span class="ListingPricesLabel">Price:</span></div>
+                                <span class="ListingPricesLabel"><fmt:message key="cruise.price"/> :</span></div>
 
                             <div class="price">
                                 <span class="currencyCode">USD </span>$ <c:out value="${item.cruise.price}"/>
@@ -76,13 +78,13 @@
 
                 </div>
                 <div>
-                    <button class="btn btn-success btn-sm">Pay Now</button>
+                    <button class="btn btn-success btn-sm"><fmt:message key="cart.pay"/></button>
                 </div>
 
             </article>
         </section>
 
-       <div class="cartTitleExcursion"><h1 align="center">Excursion List : </h1></div>
+       <div class="cartTitleExcursion"><h1 align="center"><fmt:message key="excursion.list"/> : </h1></div>
         <div class="cartExcursion">
             <c:choose>
 
@@ -97,20 +99,20 @@
                                      alt="">
                             </c:forEach>
                             <div class="cartExcursionText">
-                                <p>name :<c:out value="${excursion.name}"/></p>
-                                <p>description :<c:out value="${excursion.description}"/></p>
-                                <p>price :<c:out value="${excursion.price}"/></p>
+                                <p><fmt:message key="excursion.name"/>:<c:out value="${excursion.name}"/></p>
+                                <p><fmt:message key="excursion.description"/> :<c:out value="${excursion.description}"/></p>
+                                <p><fmt:message key="excursion.price"/> :<c:out value="${excursion.price}"/></p>
                             </div>
                         </label>
 
                     </c:forEach>
                 </c:when>
                 <c:otherwise>
-                    <p> None</p>
+                   <h1 align="center" style="margin-top: 100px"> <p> <fmt:message key="none"/></p></h1>
                 </c:otherwise>
             </c:choose>
         </div>
-
+<hr>
     </form>
 
 </c:forEach>

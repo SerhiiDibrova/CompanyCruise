@@ -2,7 +2,7 @@
 <%@include file="static/taglib.jsp" %>
 <html>
 <head>
-    <title>Contact US</title>
+    <title><fmt:message key="menu.contact.us"/></title>
     <c:import url="static/head.jsp"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -28,13 +28,13 @@
 </style>
 <section id="contact">
     <div class="container">
-        <h3 class="text-center text-uppercase">contact us</h3>
+        <h3 class="text-center text-uppercase"><fmt:message key="menu.contact.us"/></h3>
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-3 my-5">
                 <div class="card border-0">
                     <div class="card-body text-center">
                         <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
-                        <h4 class="text-uppercase mb-5">call us</h4>
+                        <h4 class="text-uppercase mb-5"><fmt:message key="menu.contact.us"/></h4>
                         <p>+380955189394</p>
                     </div>
                 </div>
