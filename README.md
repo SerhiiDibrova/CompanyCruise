@@ -7,11 +7,9 @@
 враховуючи клас квитка (басейн, спортзал, кінозал, косметичні салони ...)._
 
 ## _Інструкції по встановленню та по запуску додатка._
-1.Завантажити та розпакувати архів із проектом або завантажити за допомогою клієнта Git (git clone https://github.com/SerhiiDibrova/CompanyCruise)
-2.Створити схему база даних і необхідні таблиці за допомогою скрипта %/src/main/resources/cruise_create2.sql , потім добавити всі інформації за допомогою скрипта %/src/main/resources/cruise_insert.sql
-3.Запустити Apache Tomcat локально
-4.Запускаємо з командної строки при допомозі: mvn -X tomcat7:run або mvn clean install tomcat7:run
+1. Завантажити та розпакувати архів із проектом або завантажити за допомогою клієнта Git (git clone https://github.com/SerhiiDibrova/CompanyCruise)
+2. Створити схему база даних і необхідні таблиці за допомогою скрипта %/src/main/resources/cruise_create2.sql , потім добавити всі інформації за допомогою скрипта %/src/main/resources/cruise_insert.sql
+3. Запускаємо з командної строки при допомозі: mvn -X tomcat7:run або mvn clean install tomcat7:run
 (Будь ласка, зверніть увагу, що tomcat7:run,а не tomcat:run.)
-
 
 
