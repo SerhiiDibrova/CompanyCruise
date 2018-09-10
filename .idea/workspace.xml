@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0daac3c-ddc2-49e4-a883-707ae95a5085" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CountryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/CruiseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ExcursionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/controller/servlet/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/controller/servlet/Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/model/Cruise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/model/Excursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/model/Excursion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/training/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/training/model/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="a0daac3c-ddc2-49e4-a883-707ae95a5085" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,17 +35,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShipService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,7 +155,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-124" />
     <option name="y" value="204" />
     <option name="width" value="1378" />
@@ -201,6 +180,11 @@
             <path>
               <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
               <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,17 +226,6 @@
               <item name="training" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompanyCruise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="CommandList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompanyCruise" type="b2602c69:ProjectViewProjectNode" />
@@ -666,7 +639,7 @@
       <workItem from="1536445360466" duration="1555000" />
       <workItem from="1536501286819" duration="26575000" />
       <workItem from="1536566757370" duration="12919000" />
-      <workItem from="1536590354561" duration="10001000" />
+      <workItem from="1536590354561" duration="10613000" />
     </task>
     <servers />
   </component>
@@ -703,7 +676,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428633000" />
+    <option name="totallyTimeSpent" value="429245000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -716,7 +689,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.18464053" />
@@ -724,17 +696,17 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" visible="true" weight="0.3267974" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.22087745" side_tool="true" visible="true" weight="0.41666666" />
       <window_info anchor="bottom" id="Application Servers" order="12" sideWeight="0.49924356" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.779879" weight="0.41666666" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49621785" visible="true" weight="0.3267974" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77912253" weight="0.41666666" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49621785" weight="0.3267974" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8713592" visible="true" weight="0.37897125" />
-      <window_info id="Web" order="6" sideWeight="0.12864077" side_tool="true" visible="true" weight="0.37897125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87114847" visible="true" weight="0.48789713" />
+      <window_info id="Web" order="6" sideWeight="0.12885155" side_tool="true" visible="true" weight="0.48789713" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -764,34 +736,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/static/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/static/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/http/HttpServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/error/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-508" />
@@ -1127,8 +1071,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/ShipService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="41">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-639">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/training/controller/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/error.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/cruise.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="24" column="100" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="100" />
         </state>
       </provider>
     </entry>
